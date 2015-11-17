@@ -1,0 +1,67 @@
+[alias]
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  # Pretty log output
+  hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
+  co = checkout
+  st = status
+  br = branch
+  bra = branch -a
+  brd = branch -D
+  ci = commit
+
+[color]
+  # Use colors in Git commands that are capable of colored output when outputting to the terminal
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+# Use `origin` as the default remote on the `master` branch in all cases
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+
+[credential]
+	helper = cache --timeout=36000000
+[core]
+	excludesfile = ~/Software/confs/gitignore
+	editor = vim
+[user]
+	name = 侯茹厚
+	email = houruhou@meizu.com
+[http]
+	postBuffer = 1073741824
+[credential "http://review.rnd.meizu.com"]
+	username = houruhou
+[credential "http://review.rnd.meizu.com/l"]
+	username = houruhou
+[url "ssh://houruhou@review.rnd.meizu.com:29418/"]
+	insteadOf = ssh://review.rnd.meizu.com:29418/
+[url "ssh://houruhou@review.rnd.meizu.com:29418"]
+	insteadOf = http://review.rnd.meizu.com
+[url "ssh://houruhou@review.rnd.meizu.com:29999/"]
+	insteadOf = ssh://review.rnd.meizu.com:29999/
+[url "ssh://houruhou@review.rnd.meizu.com:29999"]
+	insteadOf = http://review.rnd.meizu.com/l
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = true
