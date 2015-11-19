@@ -75,6 +75,9 @@ ADT_HOME=/Users/houruhou/Library/Android/sdk
 PATH=$ADT_HOME/tools:$ADT_HOME/platform-tools:$ADT_HOME/build-tools/23.0.2:$PATH
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+PATH="/usr/local/Cellar/findutils/4.4.2/bin:$PATH"
 
 #function
 function cdcls(){

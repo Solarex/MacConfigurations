@@ -11,6 +11,7 @@
   bra = branch -a
   brd = branch -D
   ci = commit
+  dt = difftool
 
 [color]
   # Use colors in Git commands that are capable of colored output when outputting to the terminal
@@ -65,3 +66,5 @@
 [mergetool "diffmerge"]
 	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
 	trustExitCode = true
+[difftool]
+	prompt = false
