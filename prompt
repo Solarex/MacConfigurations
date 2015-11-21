@@ -78,6 +78,9 @@ MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 PATH="/usr/local/Cellar/findutils/4.4.2/bin:$PATH"
+PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
+EDITOR=vim
+HOMEBREW_EDITOR=vim
 
 #function
 function cdcls(){
@@ -101,6 +104,9 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias sl='ls'
 alias l='ls'
+alias md="open -a MacDown"
+alias showandroid="cat ~/Workspace/OpenSource/local_android_installs"
+alias showbuild="cat ~/Workspace/OpenSource/build_sample.gradle"
 
 #rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -119,3 +125,7 @@ export PIP_RESPECT_VIRTUALENV=true
 blog="/Users/houruhou/Workspace/OpenSource/Blog+Wiki/blog"
 simiki="/Users/houruhou/Workspace/OpenSource/Blog+Wiki/simiki"
 wiki="/Users/houruhou/Workspace/OpenSource/Blog+Wiki/wiki"
+posts="/Users/houruhou/Workspace/OpenSource/Blog+Wiki/blog/source/_posts"
+flyme5="/Users/houruhou/Workspace/Meizu/flyme/app_flyme5_base"
+mzupdate="/Users/houruhou/Workspace/Meizu/flyme/app_flyme5_base/meizu/Cloud/MzUpdate"
+read="/Users/houruhou/Documents/pdf_to_sync"
