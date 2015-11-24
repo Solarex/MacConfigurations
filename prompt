@@ -137,6 +137,7 @@ proj="/Users/houruhou/Workspace/OpenSource/Projects"
 reading="/Users/houruhou/Workspace/OpenSource/AndroidReadings"
 study="/Users/houruhou/Workspace/OpenSource/Study"
 sample="/Users/houruhou/Library/Android/sdk/samples/android-15"
+training="/Users/houruhou/Workspace/OpenSource/Training+Guides"
 
 #z
 . `brew --prefix`/etc/profile.d/z.sh
