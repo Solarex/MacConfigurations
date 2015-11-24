@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>iTunes Subscribed Feeds</title>
+        <dateCreated>Fri, 30 Oct 2015 00:52:33 GMT</dateCreated>
+        <dateModified>Fri, 30 Oct 2015 00:52:33 GMT</dateModified>
+    </head>
+    <body>
+        <outline text="60-Second Science" type="rss" xmlUrl="http://www.scientificamerican.com/podcast/sciam_podcast_i_d.xml" htmlUrl="http://www.scientificamerican.com/podcast/60-second-science/" />
+        <outline text="60-Second Tech" type="rss" xmlUrl="http://www.scientificamerican.com/sciam/xml/iTunes.cfm?id=60-second-tech" htmlUrl="http://www.scientificamerican.com/podcast/60-second-tech/" />
+        <outline text="The Art of Charm | Confidence | Relationship &#38; Dating Advice | Biohacking | Productivity" type="rss" xmlUrl="http://theartofcharmpodcast.theartofcharm.libsynpro.com/rss" htmlUrl="http://www.TheArtOfCharmPodcast.com" />
+        <outline text="TEDTalks (video)" type="rss" xmlUrl="http://feeds.feedburner.com/TEDTalks_video" htmlUrl="http://www.ted.com/talks/list" />
+        <outline text="CNN Student News (video)" type="rss" xmlUrl="http://rss.cnn.com/services/podcasting/studentnews/rss.xml" htmlUrl="http://www.cnn.com/EDUCATION?eref=studentnews" />
+        <outline text="The English We Speak" type="rss" xmlUrl="http://www.bbc.co.uk/programmes/p02pc9zn/episodes/downloads.rss" htmlUrl="http://www.bbc.co.uk/programmes/p02pc9zn" />
+        <outline text="All Ears English Podcast | Real English Vocabulary | Conversation | American Culture" type="rss" xmlUrl="http://allearsenglish.libsyn.com/rss" htmlUrl="http://allearsenglish.com" />
+        <outline text="6 Minute English" type="rss" xmlUrl="http://www.bbc.co.uk/programmes/p02pc9tn/episodes/downloads.rss" htmlUrl="http://www.bbc.co.uk/programmes/p02pc9tn" />
+        <outline text="6 Minute Vocabulary" type="rss" xmlUrl="http://www.bbc.co.uk/programmes/p02pc9xz/episodes/downloads.rss" htmlUrl="http://www.bbc.co.uk/programmes/p02pc9xz" />
+        <outline text="Learning English for China" type="rss" xmlUrl="http://www.bbc.co.uk/programmes/p02pc9st/episodes/downloads.rss" htmlUrl="http://www.bbc.co.uk/programmes/p02pc9st" />
+        <outline text="Hidden Brain" type="rss" xmlUrl="http://www.npr.org/rss/podcast.php?id=510308" htmlUrl="http://npr.org/series/423302056/hidden-brain" />
+    </body>
+</opml>
