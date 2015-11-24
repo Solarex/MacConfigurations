@@ -81,6 +81,7 @@ PATH="/usr/local/Cellar/findutils/4.4.2/bin:$PATH"
 PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
 EDITOR=vim
 HOMEBREW_EDITOR=vim
+GRADLE_HOME="/Users/houruhou/.gradle"
 
 #function
 function cdcls(){
@@ -95,7 +96,8 @@ function adblog(){
     adb logcat -v threadtime | tee $suffix.log
 }
 function greps(){
-    grep -nrHi "$@" .
+    #grep -nrHi "$@" .
+    grep -i --color=auto -nrHi --exclude-dir={.git,build} "$@" .
 }
 
 #alias
@@ -107,6 +109,8 @@ alias l='ls'
 alias md="open -a MacDown"
 alias showandroid="cat ~/Workspace/OpenSource/local_android_installs"
 alias showbuild="cat ~/Workspace/OpenSource/build_sample.gradle"
+alias showkeyboard="open /Users/houruhou/Pictures/ScreenShots/keyboard.png"
+alias showgradle="tree -L 3 /Users/houruhou/.gradle/wrapper/dists"
 
 #rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -129,3 +133,10 @@ posts="/Users/houruhou/Workspace/OpenSource/Blog+Wiki/blog/source/_posts"
 flyme5="/Users/houruhou/Workspace/Meizu/flyme/app_flyme5_base"
 mzupdate="/Users/houruhou/Workspace/Meizu/flyme/app_flyme5_base/meizu/Cloud/MzUpdate"
 read="/Users/houruhou/Documents/pdf_to_sync"
+proj="/Users/houruhou/Workspace/OpenSource/Projects"
+reading="/Users/houruhou/Workspace/OpenSource/AndroidReadings"
+study="/Users/houruhou/Workspace/OpenSource/Study"
+sample="/Users/houruhou/Library/Android/sdk/samples/android-15"
+
+#z
+. `brew --prefix`/etc/profile.d/z.sh
