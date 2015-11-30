@@ -64,6 +64,8 @@ bind 'set completion-ignore-case on'
 bind 'set match-hidden-files off'
 bind 'set show-all-if-ambiguous on'
 
+shopt -s cdspell
+
 #git
 ssh-add ~/Software/confs/id_rsa_github >/dev/null 2>&1
 ssh-add ~/Software/confs/id_rsa_meizu >/dev/null 2>&1
@@ -138,6 +140,7 @@ reading="/Users/houruhou/Workspace/OpenSource/AndroidReadings"
 study="/Users/houruhou/Workspace/OpenSource/Study"
 sample="/Users/houruhou/Library/Android/sdk/samples/android-15"
 training="/Users/houruhou/Workspace/OpenSource/Training+Guides"
+decompile="/Users/houruhou/Workspace/OpenSource/decompile"
 
 #z
 . `brew --prefix`/etc/profile.d/z.sh
