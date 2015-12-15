@@ -37,6 +37,7 @@ set number
 " search
 set hlsearch
 set incsearch
+set ignorecase
 "set nowrapscan
 noremap <CR> :nohlsearch<CR>
 
