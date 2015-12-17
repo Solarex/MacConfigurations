@@ -81,9 +81,9 @@ PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 PATH="/usr/local/Cellar/findutils/4.4.2/bin:$PATH"
 PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
-VISUAL=/usr/bin/vim
-EDITOR=/usr/bin/vim
-HOMEBREW_EDITOR=/usr/bin/vim
+export VISUAL=vim
+export EDITOR=vim
+export HOMEBREW_EDITOR=vim
 GRADLE_HOME="/Users/houruhou/.gradle"
 
 #function
@@ -116,6 +116,8 @@ alias showkeyboard="open /Users/houruhou/Pictures/ScreenShots/keyboard.png"
 alias showgradle="tree -L 3 /Users/houruhou/.gradle/wrapper/dists"
 alias shark="java -jar /Users/houruhou/Software/confs/classyshark_3.2.jar"
 alias st="open -a SourceTree"
+alias eclipsegoogle="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-20140702/eclipse/Eclipse.app --args -data /Users/houruhou/Workspace/Solarex/EclipseWorkspace"
+alias eclipseopensource="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-20140702/eclipse/Eclipse.app --args -data /Users/houruhou/Workspace/Solarex/EclipseWorkspace4Opensouce"
 
 #rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
