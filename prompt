@@ -102,6 +102,9 @@ function greps(){
     #grep -nrHi "$@" .
     grep -i --color=auto -nrHi --exclude-dir={.git,build} "$@" .
 }
+function text(){
+    open -a TextWrangler "$@"
+}
 
 #alias
 alias cp='cp -i'
@@ -109,6 +112,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias sl='ls'
 alias l='ls'
+alias grep='grep --color=auto -i '
 alias md="open -a MacDown"
 alias showandroid="cat ~/Workspace/OpenSource/local_android_installs"
 alias showbuild="cat ~/Workspace/OpenSource/build_sample.gradle"
@@ -118,6 +122,8 @@ alias shark="java -jar /Users/houruhou/Software/confs/classyshark_3.2.jar"
 alias st="open -a SourceTree"
 alias eclipsegoogle="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-20140702/eclipse/Eclipse.app --args -data /Users/houruhou/Workspace/Solarex/EclipseWorkspace"
 alias eclipseopensource="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-20140702/eclipse/Eclipse.app --args -data /Users/houruhou/Workspace/Solarex/EclipseWorkspace4Opensouce"
+alias flushdns="sudo killall -HUP mDNSResponder"
+alias fuckgfw="open -n /Users/houruhou/Software/zipfile/appified-xx-net/XX-Net.app"
 
 #rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
