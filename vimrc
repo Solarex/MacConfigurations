@@ -34,6 +34,10 @@ set foldlevel=100
 set ruler
 set number
 
+" show invisible
+" set list
+" set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
 " search
 set hlsearch
 set incsearch
