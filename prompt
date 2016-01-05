@@ -126,6 +126,8 @@ alias eclipsegoogle="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-
 alias eclipseopensource="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-20140702/eclipse/Eclipse.app --args -data /Users/houruhou/Workspace/Solarex/EclipseWorkspace4Opensouce"
 alias flushdns="sudo killall -HUP mDNSResponder"
 alias fuckgfw="open -n /Users/houruhou/Software/zipfile/appified-xx-net/XX-Net.app"
+alias showtvwifi="adb shell dumpsys netstats | grep -E 'iface=wlan.*networkId' | cut -d \\\" -f2"
+alias showtvip="adb shell netcfg | grep wlan"
 
 #rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
