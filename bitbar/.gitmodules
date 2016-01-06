@@ -1,0 +1,9 @@
+[submodule "App/Vendor/STPrivilegedTask"]
+	path = App/Vendor/STPrivilegedTask
+	url = https://github.com/sveinbjornt/STPrivilegedTask.git
+[submodule "App/Vendor/DateTools"]
+	path = App/Vendor/DateTools
+	url = https://github.com/MatthewYork/DateTools.git
+[submodule "App/Vendor/LaunchAtLoginController"]
+	path = App/Vendor/LaunchAtLoginController
+	url = https://github.com/mralexgray/LaunchAtLoginController--with-ARC-.git
