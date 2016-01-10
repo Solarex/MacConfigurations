@@ -2,7 +2,6 @@ ant
 apktool
 autoconf
 automake
-brew-cask
 bsdiff
 bsdmake
 cctools
