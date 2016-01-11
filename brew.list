@@ -36,6 +36,7 @@ libtool
 libvo-aacenc
 libyaml
 mpfr2
+node
 oniguruma
 openssl
 pkg-config
