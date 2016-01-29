@@ -16,6 +16,7 @@ function FindProxyForURL(url, host) {
         dnsDomainIs(host, '.pornhub.com') ||
         dnsDomainIs(host, '.phncdn.com') ||
         dnsDomainIs(host, '.vimeo.com') ||
+        dnsDomainIs(host, '.tumblr.com') ||
         host == 'cdnjs.cloudflare.com' ||
         host == 'wp.me' ||
         host == 'ow.ly' ||
