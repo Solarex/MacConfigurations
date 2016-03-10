@@ -120,7 +120,7 @@ env/
 build/
 develop-eggs/
 dist/
-downloads/
+# downloads/
 eggs/
 .eggs/
 lib/

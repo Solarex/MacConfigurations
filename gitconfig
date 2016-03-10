@@ -40,23 +40,6 @@
 [core]
 	excludesfile = /Users/houruhou/Software/confs/gitignore
 	editor = vim
-[user]
-	name = 侯茹厚
-	email = houruhou@meizu.com
-[http]
-	postBuffer = 1073741824
-[credential "http://review.rnd.meizu.com"]
-	username = houruhou
-[credential "http://review.rnd.meizu.com/l"]
-	username = houruhou
-[url "ssh://houruhou@review.rnd.meizu.com:29418/"]
-	insteadOf = ssh://review.rnd.meizu.com:29418/
-[url "ssh://houruhou@review.rnd.meizu.com:29418"]
-	insteadOf = http://review.rnd.meizu.com
-[url "ssh://houruhou@review.rnd.meizu.com:29999/"]
-	insteadOf = ssh://review.rnd.meizu.com:29999/
-[url "ssh://houruhou@review.rnd.meizu.com:29999"]
-	insteadOf = http://review.rnd.meizu.com/l
 [diff]
 	tool = diffmerge
 [difftool "diffmerge"]
