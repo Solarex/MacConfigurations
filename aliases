@@ -23,3 +23,5 @@ alias cls="clear"
 alias c="clear"
 alias cl="clear"
 alias lc="clear"
+
+alias vps="ssh -Tv -p 27207 root@vps"
