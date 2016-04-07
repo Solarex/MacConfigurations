@@ -159,3 +159,18 @@ decompile="/Users/houruhou/Workspace/OpenSource/decompile"
 
 #z
 . `brew --prefix`/etc/profile.d/z.sh
+
+#colorsvn
+source /usr/local/etc/profile.d/colorsvn-env.sh
+
+alias svn="colorsvn"
+
+alias fetchkey="curl http://dongfangad/toutiao_appkey/code"
+function fetchad(){
+    fetchkey
+    printf "\n----------------\n"
+    read -p "Input key:" key
+    echo $key
+    curl --data "key=$key\&type=toutiao\&pgnum=1\&ime=867451024812247\&apptypeid=solarex\&appver=1.1" http://dongfangad/toutiao_appnew/newspool
+    printf "\n"
+}
