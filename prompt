@@ -106,6 +106,9 @@ function greps(){
 function text(){
     open -a TextWrangler "$@"
 }
+function pogai(){
+    say -v Sin-ji "$@"
+}
 
 #alias
 alias cp='cp -i'
