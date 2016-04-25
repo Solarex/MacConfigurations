@@ -101,7 +101,7 @@ function adblog(){
 }
 function greps(){
     #grep -nrHi "$@" .
-    grep -i --color=auto -nrHi --exclude-dir={.git,build} "$@" .
+    grep -i --color=auto -nrHi --exclude-dir={.git,build,bin,gen} "$@" .
 }
 function text(){
     open -a TextWrangler "$@"
@@ -169,6 +169,7 @@ source /usr/local/etc/profile.d/colorsvn-env.sh
 alias svn="colorsvn"
 
 alias fetchkey="curl http://dongfangad/toutiao_appkey/code"
+#todo:remove line break from input
 function fetchad(){
     fetchkey
     printf "\n----------------\n"
@@ -177,3 +178,6 @@ function fetchad(){
     curl --data "key=$key\&type=toutiao\&pgnum=1\&ime=867451024812247\&apptypeid=solarex\&appver=1.1" http://dongfangad/toutiao_appnew/newspool
     printf "\n"
 }
+
+#jenv
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi

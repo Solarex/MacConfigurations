@@ -17,6 +17,8 @@ function FindProxyForURL(url, host) {
         dnsDomainIs(host, '.phncdn.com') ||
         dnsDomainIs(host, '.vimeo.com') ||
         dnsDomainIs(host, '.tumblr.com') ||
+        dnsDomainIs(host, '.taobao.com') ||
+        dnsDomainIs(host, '.medium.com') ||
         host == 'cdnjs.cloudflare.com' ||
         host == 'wp.me' ||
         host == 'ow.ly' ||
