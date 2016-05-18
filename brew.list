@@ -48,6 +48,7 @@ openssl
 pcre
 pkg-config
 proxychains-ng
+pyenv
 readline
 rename
 ruby
