@@ -1,3 +1,6 @@
+//usage:
+// apply from: "config.gradle"
+// "gradleplugin"                     : "com.android.tools.build:gradle:2.1.0",
 ext {
     android = [
         compileSdkVersion:23,
@@ -7,7 +10,6 @@ ext {
     ]
 
     dependencies = [
-        "gradleplugin"                     : "com.android.tools.build:gradle:2.1.0",
         "supportv4"                        : "com.android.support:support-v4:23.2.1",
         "supportv7"                        : "com.android.support:appcompat-v7:23.2.1",
         "fresco"                           : "com.facebook.fresco:fresco:0.10.0"
