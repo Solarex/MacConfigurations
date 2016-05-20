@@ -135,6 +135,8 @@ alias fuckgfw="open -n /Users/houruhou/Software/zipfile/appified-xx-net/XX-Net.a
 alias showtvwifi="adb shell dumpsys netstats | grep -E 'iface=wlan.*networkId' | cut -d \\\" -f2"
 alias showtvip="adb shell netcfg | grep wlan"
 alias applaunch="adb logcat | grep -v InputReader | grep AppLaunch"
+alias getip="ifconfig | grep inet | grep broadcast"
+alias card="http http://cloudservice26.kingsoft-office-service.com/cards version=9.7 firstchannel=cn00999 channel=cn00999 deviceid=be06dd4bc4ce00e0701fecf86dad43d2 package=cn.wps.moffice lang=zh-CN beta=false sdkversion=23 --print=b -o card"
 
 # System.err to grep stacktrace information of catched exceptions
 # #AndroidRuntime to grep stacktrace information of uncaughted runtime exceptions
