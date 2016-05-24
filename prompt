@@ -102,6 +102,7 @@ function adblog(){
 alias clearlog="adb logcat -c && adb logcat -c && adb logcat -c && adb logcat -c"
 alias mainlog="adb logcat -v threadtime | tee `date +%F-%H-%M-%S`.main"
 alias eventlog="adb logcat -v threadtime -b events | tee `date +%F-%H-%M-%S`.events"
+
 function greps(){
     #grep -nrHi "$@" .
     grep -i --color=auto -nrHi --exclude-dir={.git,.svn,lib,.gradle,.idea,captures,build,bin,gen} --exclude={*.png,*.jpg,*.jar,*.webp,*.bmp,*.svg} -E "$@" .
@@ -130,6 +131,7 @@ alias shark="java -jar /Users/houruhou/Software/confs/classyshark_3.2.jar"
 alias st="open -a SourceTree"
 alias eclipsegoogle="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-20140702/eclipse/Eclipse.app --args -data /Users/houruhou/Workspace/Solarex/EclipseWorkspace"
 alias eclipseopensource="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-20140702/eclipse/Eclipse.app --args -data /Users/houruhou/Workspace/Solarex/EclipseWorkspace4Opensouce"
+alias eclipseclean="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-20140702/eclipse/Eclipse.app --args -data /Users/houruhou/Workspace/Solarex/EclipseWorkspace4Opensouce/clean"
 alias flushdns="sudo killall -HUP mDNSResponder"
 alias fuckgfw="open -n /Users/houruhou/Software/zipfile/appified-xx-net/XX-Net.app"
 alias showtvwifi="adb shell dumpsys netstats | grep -E 'iface=wlan.*networkId' | cut -d \\\" -f2"
@@ -139,6 +141,7 @@ alias getip="ifconfig | grep inet | grep broadcast"
 alias card="http http://cloudservice26.kingsoft-office-service.com/cards version=9.7 firstchannel=cn00999 channel=cn00999 deviceid=be06dd4bc4ce00e0701fecf86dad43d2 package=cn.wps.moffice lang=zh-CN beta=false sdkversion=23 --print=b -o card"
 alias initconfig="cp /Users/houruhou/Software/confs/config.gradle ."
 alias getpicattr="sips -g pixelWidth -g pixelHeight "
+alias ss="/usr/local/opt/shadowsocks-libev/bin/ss-local -v -c /Users/houruhou/Software/confs/sslocal.json" 
 
 # System.err to grep stacktrace information of catched exceptions
 # #AndroidRuntime to grep stacktrace information of uncaughted runtime exceptions
@@ -218,3 +221,11 @@ export ANDROID_HVPROTO=ddm
 export PYENV_ROOT="/Users/houruhou/.pyenv"
 export PATH=$PYENV_ROOT/bin:$PATH
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+#shadowsocks getpac
+function getpac(){
+    ss&
+    pyenv activate dev
+    genpac --proxy="SOCKS5 127.0.0.1:8090" --gfwlist-proxy="SOCKS5 127.0.0.1:8090" -o /Users/houruhou/Software/confs/shadowsocks_autoproxy.pac --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+}

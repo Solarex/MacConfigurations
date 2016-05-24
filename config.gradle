@@ -12,6 +12,7 @@ ext {
     dependencies = [
         "supportv4"                        : "com.android.support:support-v4:23.2.1",
         "supportv7"                        : "com.android.support:appcompat-v7:23.2.1",
+        "supportdesign"                    : "com.android.support:design:23.2.1",
         "fresco"                           : "com.facebook.fresco:fresco:0.10.0"
     ]
 }
