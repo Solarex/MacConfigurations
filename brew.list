@@ -18,12 +18,14 @@ ffmpeg
 findutils
 freetype
 gcc49
+gdbm
 gettext
 git
 gmp4
 gnu-sed
 graphviz
 hexedit
+httpie
 imagemagick
 isl011
 jenv
@@ -42,7 +44,6 @@ libyaml
 libzip
 mpfr2
 mtr
-node
 oniguruma
 openssl
 pcre
@@ -52,6 +53,8 @@ pyenv
 readline
 rename
 ruby
+shadowsocks-libev
+sqlite
 texi2html
 the_silver_searcher
 tig
