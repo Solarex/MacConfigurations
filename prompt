@@ -229,3 +229,7 @@ function getpac(){
     pyenv activate dev
     genpac --proxy="SOCKS5 127.0.0.1:8090" --gfwlist-proxy="SOCKS5 127.0.0.1:8090" -o /Users/houruhou/Software/confs/shadowsocks_autoproxy.pac --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
 }
+
+#node
+export NVM_DIR="/Users/houruhou/Workspace/Solarex/NodeWorkspace"
+. "$(brew --prefix nvm)/nvm.sh"
