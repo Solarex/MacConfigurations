@@ -188,9 +188,9 @@ decompile="/Users/houruhou/Workspace/OpenSource/decompile"
 . `brew --prefix`/etc/profile.d/z.sh
 
 #colorsvn
-source /usr/local/etc/profile.d/colorsvn-env.sh
+#source /usr/local/etc/profile.d/colorsvn-env.sh
 
-alias svn="colorsvn"
+#alias svn="colorsvn"
 
 alias fetchkey="curl http://dongfangad/toutiao_appkey/code"
 #todo:remove line break from input
