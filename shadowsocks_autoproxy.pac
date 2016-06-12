@@ -2367,6 +2367,7 @@ var rules = [
             "*.suroot.com*", 
             "*.appspot.com*", 
             "*.google.com*", 
+            "*.tumblr.com*",
             "*.youtube.com*", 
             "*.kat.cr*", 
             "*.v2ex.com*", 

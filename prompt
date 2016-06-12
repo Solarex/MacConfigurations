@@ -99,6 +99,9 @@ function adblog(){
     suffix=`date +%F-%H-%M-%S`
     adb logcat -v threadtime | tee $suffix.log
 }
+function svnlog(){
+    svn log --verbose | sed -n "/$1/,/-----$/ p"
+}
 alias clearlog="adb logcat -c && adb logcat -c && adb logcat -c && adb logcat -c"
 alias mainlog="adb logcat -v threadtime | tee `date +%F-%H-%M-%S`.main"
 alias eventlog="adb logcat -v threadtime -b events | tee `date +%F-%H-%M-%S`.events"
@@ -139,9 +142,12 @@ alias showtvip="adb shell netcfg | grep wlan"
 alias applaunch="adb logcat | grep -v InputReader | grep AppLaunch"
 alias getip="ifconfig | grep inet | grep broadcast"
 alias card="http http://cloudservice26.kingsoft-office-service.com/cards version=9.7 firstchannel=cn00999 channel=cn00999 deviceid=be06dd4bc4ce00e0701fecf86dad43d2 package=cn.wps.moffice lang=zh-CN beta=false sdkversion=23 --print=b -o card"
+alias infinite="http 'http://cloudservice22.kingsoft-office-service.com/ad?ad_height=1645&ad_width=1080&android_id=2d8b2887a2eafa39&android_id_md5=3949b6cdc1a9e7b433021aba8f7abfd6&android_id_sha1=4c27d2d724c25316ba6c403dec31df9935ba5545&app_version=9.7&brand=Xiaomi&channel=cn00999&country=CN&device_screen_size=2&device_type=phone&dip=2.75&dpi=440&gaid=&imei=&ip=10.20.140.81&lang=zh&mac=02%3A00%3A00%3A00%3A00%3A00&manufacturer=Xiaomi&mcc=0&mnc=0&model=MI+NOTE+LTE&network_type=wifi&osversion=6.0.1&osversion_int=23&package_name=cn.wps.moffice&platform=android&screen_height=1920&screen_width=1080&tzone=%2B0800&tzone_offset=28800000&uid=3949b6cdc1a9e7b433021aba8f7abfd6&user_agent=Mozilla%2F5.0+%28Linux%3B+Android+6.0.1%3B+MI+NOTE+LTE+Build%2FMMB29M%3B+wv%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Version%2F4.0+Chrome%2F46.0.2490.76+Mobile+Safari%2F537.36&ad_type=6'"
+alias nav="http http://cloudservice29.kingsoft-office-service.com/nav version=9.7 firstchannel=cn00999 channel=cn00999 deviceid=3949b6cdc1a9e7b433021aba8f7abfd6 package=cn.wps.moffice lang=zh-CN beta=false sdkversion=23"
 alias initconfig="cp /Users/houruhou/Software/confs/config.gradle ."
 alias getpicattr="sips -g pixelWidth -g pixelHeight "
 alias ss="/usr/local/opt/shadowsocks-libev/bin/ss-local -v -c /Users/houruhou/Software/confs/sslocal.json" 
+
 
 # System.err to grep stacktrace information of catched exceptions
 # #AndroidRuntime to grep stacktrace information of uncaughted runtime exceptions
