@@ -24,5 +24,5 @@ alias c="clear"
 alias cl="clear"
 alias lc="clear"
 
-alias vps="ssh -Tv -p 29118 root@vps"
+alias vps="ssh -p 29118 root@vps"
 alias mtr="sudo /usr/local/Cellar/mtr/0.86/sbin/mtr"

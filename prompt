@@ -82,9 +82,11 @@ MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 PATH="/usr/local/Cellar/findutils/4.4.2/bin:$PATH"
 PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
 PATH="/usr/local/Cellar/dos2unix/7.3.1/bin/:$PATH"
+PATH="/usr/local/Cellar/rsync/3.1.2/bin/:$PATH"
 export VISUAL=vim
 export EDITOR=vim
 export HOMEBREW_EDITOR=vim
+export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom"
 GRADLE_HOME="/Users/houruhou/.gradle"
 
 #function
@@ -115,6 +117,23 @@ function text(){
 }
 function pogai(){
     say -v Sin-ji "$@"
+}
+
+function dex-method-count() {
+    cat $1 | head -c 92 | tail -c 4 | hexdump -e '1/4 "%d\n"'
+}
+function dex-method-count-by-package() {
+    dir=$(mktemp -d)
+    d2j-baksmali $1 -f -o $dir
+    cd $dir
+    for pkg in `find . -type d`; do
+        smali $pkg -o $pkg/classes.dex
+        count=$(dex-method-count $pkg/classes.dex)
+        name=$(echo ${pkg:(${#dir} + 1)} | tr '/' '.')
+        echo -e "$count\t$name"
+    done
+    cd -
+    rm -rf $dir
 }
 
 #alias
