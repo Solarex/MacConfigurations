@@ -21,6 +21,36 @@ ext {
         "gson"                             : "com.google.code.gson:gson:2.5"
         "materialiconlib"                  : "net.steamcrafted:materialiconlib:1.0.9"
         "materialish-progress"             : "com.pnikosis:materialish-progress:1.7"
-    
+        "picasso"                          : "com.squareup.picasso:picasso:2.5.2"
+        "retrofit2-converter-moshi"        : "com.squareup.retrofit2:converter-moshi:2.0.2"
+        "okhttp-urlconnection"             : "com.squareup.okhttp:okhttp-urlconnection:2.7.5"
+        "roboguice"                        : "org.roboguice:roboguice:2.0"
+        "egit-github-core"                 : "org.eclipse.mylyn.github:org.eclipse.egit.github.core:4.3.0.201604071810-r"
+        "guice-assistedinject"             : "com.google.inject.extensions:guice-assistedinject:3.0"
+        "viewpagerindicator"               : "com.viewpagerindicator:library:2.4.1@aar"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     ]
 }
