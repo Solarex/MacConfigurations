@@ -107,6 +107,7 @@ function svnlog(){
 alias clearlog="adb logcat -c && adb logcat -c && adb logcat -c && adb logcat -c"
 alias mainlog="adb logcat -v threadtime | tee `date +%F-%H-%M-%S`.main"
 alias eventlog="adb logcat -v threadtime -b events | tee `date +%F-%H-%M-%S`.events"
+alias startpostgres="postgres -D /usr/local/var/postgres"
 
 function greps(){
     #grep -nrHi "$@" .
@@ -134,6 +135,16 @@ function dex-method-count-by-package() {
     done
     cd -
     rm -rf $dir
+}
+function polipo(){
+    polipo -c /Users/houruhou/Software/confs/polipo.conf 
+    export ALL_PROXY=http://127.0.0.1:8123/
+    export http_proxy=http://localhost:8123/
+}
+function polipoover(){
+    pkill polipo
+    unset ALL_PROXY
+    unset http_proxy
 }
 
 #alias

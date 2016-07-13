@@ -3,9 +3,11 @@ ant
 apktool
 autoconf
 automake
+boxes
 bsdiff
 bsdmake
 cctools
+cheat
 cloog018
 colorsvn
 coreutils
@@ -31,6 +33,7 @@ isl011
 jenv
 jpeg
 jq
+jsonschema2pojo
 lame
 libav
 libgpg-error
@@ -42,6 +45,7 @@ libtool
 libvo-aacenc
 libyaml
 libzip
+mobile-shell
 mpfr2
 mtr
 nvm
@@ -49,13 +53,17 @@ oniguruma
 openssl
 pcre
 pkg-config
+polipo
+protobuf
 proxychains-ng
 pyenv
 readline
 rename
+rsync
 ruby
 shadowsocks-libev
 sqlite
+subversion
 texi2html
 the_silver_searcher
 tig
