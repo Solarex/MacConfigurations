@@ -60,5 +60,3 @@
 [user]
 	name = Solarex
 	email = rh.hou.work@gmail.com
-[http]
-	proxy = socks5://127.0.0.1:8090

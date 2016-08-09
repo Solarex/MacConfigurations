@@ -52,6 +52,16 @@ function parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
+function watch(){
+    while :;
+    do
+        clear
+        date
+        $1
+        sleep $2
+    done
+}
+
 export PS1="\[${BOLD}${MAGENTA}\]\u \[$GREEN\]@ \t \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
 
@@ -263,7 +273,7 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 function getpac(){
     ss&
     pyenv activate dev
-    genpac --proxy="SOCKS5 127.0.0.1:8090" --gfwlist-proxy="SOCKS5 127.0.0.1:8090" -o /Users/houruhou/Software/confs/shadowsocks_autoproxy.pac --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+    genpac --proxy="SOCKS5 127.0.0.1:8888" --gfwlist-proxy="SOCKS5 127.0.0.1:8888" -o /Users/houruhou/Software/confs/shadowsocks_autoproxy.pac --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
 }
 
 #node

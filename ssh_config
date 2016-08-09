@@ -1,2 +1,5 @@
 Host ubuntu
 user houruhou
+
+KeepAlive yes
+ServerAliveInterval 10
