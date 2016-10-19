@@ -2,6 +2,7 @@
 # Shamelessly copied from https://github.com/gf3/dotfiles
 # Screenshot: http://i.imgur.com/s0Blh.png
 
+
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
   export TERM=gnome-256color
 elif infocmp xterm-256color >/dev/null 2>&1; then
@@ -81,7 +82,7 @@ ssh-add ~/Software/confs/id_rsa_github >/dev/null 2>&1
 ssh-add ~/Software/confs/id_rsa_meizu >/dev/null 2>&1
 
 #path
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
 PATH=$PATH:/Users/houruhou/Software/bin
 ADT_HOME=/Users/houruhou/Library/Android/sdk
 PATH=$ADT_HOME/tools:$ADT_HOME/platform-tools:$ADT_HOME/build-tools/23.0.2:$PATH
@@ -91,8 +92,8 @@ PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 PATH="/usr/local/Cellar/findutils/4.4.2/bin:$PATH"
 PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
-PATH="/usr/local/Cellar/dos2unix/7.3.1/bin/:$PATH"
-PATH="/usr/local/Cellar/rsync/3.1.2/bin/:$PATH"
+PATH="/usr/local/Cellar/dos2unix/7.3.1/bin:$PATH"
+PATH="/usr/local/Cellar/rsync/3.1.2/bin:$PATH"
 export VISUAL=vim
 export EDITOR=vim
 export HOMEBREW_EDITOR=vim
@@ -156,7 +157,6 @@ function polipoover(){
     unset ALL_PROXY
     unset http_proxy
 }
-
 #alias
 alias cp='cp -i'
 alias mv='mv -i'
@@ -279,3 +279,4 @@ function getpac(){
 #node
 export NVM_DIR="/Users/houruhou/Workspace/Solarex/NodeWorkspace"
 . "$(brew --prefix nvm)/nvm.sh"
+
