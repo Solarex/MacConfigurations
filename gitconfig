@@ -60,3 +60,5 @@
 [user]
 	name = Solarex
 	email = rh.hou.work@gmail.com
+[http]
+	proxy = 127.0.0.1:8123

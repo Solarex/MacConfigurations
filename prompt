@@ -147,16 +147,9 @@ function dex-method-count-by-package() {
     cd -
     rm -rf $dir
 }
-function polipo(){
-    polipo -c /Users/houruhou/Software/confs/polipo.conf 
-    export ALL_PROXY=http://127.0.0.1:8123/
-    export http_proxy=http://localhost:8123/
-}
-function polipoover(){
-    pkill polipo
-    unset ALL_PROXY
-    unset http_proxy
-}
+#alias polipo='polipo -c /Users/houruhou/Software/confs/polipo.conf'
+alias polipo='/usr/local/bin/polipo socksParentProxy=localhost:8888'
+
 #alias
 alias cp='cp -i'
 alias mv='mv -i'
