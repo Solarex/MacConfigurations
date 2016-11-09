@@ -40,7 +40,6 @@
 [core]
 	excludesfile = /Users/houruhou/Software/confs/gitignore
 	editor = vim
-	gitproxy = git-proxy
 [diff]
 	tool = diffmerge
 [difftool "diffmerge"]
@@ -61,5 +60,3 @@
 [user]
 	name = Solarex
 	email = rh.hou.work@gmail.com
-[socks]
-	proxy = localhost:8888
