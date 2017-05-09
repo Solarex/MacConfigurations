@@ -6,8 +6,6 @@ ServerAliveInterval 10
 
 Host github.com
     User                    git
-    ProxyCommand            nc -x localhost:8888 %h %p
 
 Host bitbucket.org
     User                    git
-    ProxyCommand            nc -x localhost:8888 %h %p

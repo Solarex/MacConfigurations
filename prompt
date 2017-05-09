@@ -183,6 +183,7 @@ alias initconfig="cp /Users/houruhou/Software/confs/config.gradle ."
 alias getpicattr="sips -g pixelWidth -g pixelHeight "
 alias ss="/usr/local/opt/shadowsocks-libev/bin/ss-local -v -c /Users/houruhou/Software/confs/sslocal.json" 
 alias npm="npm --registry=https://registry.npm.taobao.org"
+alias methodtime="java -jar /Users/houruhou/Software/confs/methodtime-trace-analysis.jar"
 
 
 # System.err to grep stacktrace information of catched exceptions
@@ -248,8 +249,8 @@ function fetchad(){
 #jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
-export JAVA8_HOME=`/usr/libexec/java_home -v1.8`
-
+#export JAVA8_HOME=`/usr/libexec/java_home -v1.8`
+JAVA_HOME=`/usr/libexec/java_home -v1.8`
 #gradle
 GRADLE_HOME="/Users/houruhou/.gradle/wrapper/dists/gradle-2.13-all/gradle-2.13"
 PATH=$PATH:$GRADLE_HOME/bin:
