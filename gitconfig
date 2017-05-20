@@ -12,6 +12,7 @@
   brd = branch -D
   ci = commit
   dt = difftool
+	g = grep --break --heading --line-number
 
 [color]
   # Use colors in Git commands that are capable of colored output when outputting to the terminal
@@ -40,6 +41,7 @@
 [core]
 	excludesfile = /Users/houruhou/Software/confs/gitignore
 	editor = vim
+	quotepath = false
 [diff]
 	tool = diffmerge
 [difftool "diffmerge"]
@@ -60,3 +62,9 @@
 [user]
 	name = Solarex
 	email = rh.hou.work@gmail.com
+[grep]
+	lineNumber = true
+	extendRegexp = true
+[i18n]
+	commitencoding = utf-8
+	logoutputencoding = utf-8
