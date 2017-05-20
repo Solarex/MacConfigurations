@@ -1,0 +1,3 @@
+[submodule "charles-hacking"]
+	path = charles-hacking
+	url = git@github.com:100apps/charles-hacking.git
