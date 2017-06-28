@@ -47,6 +47,7 @@ jenv
 jnettop
 jpeg
 jq
+kotlin
 lame
 libav
 libev
@@ -72,6 +73,7 @@ mtr
 nvm
 oniguruma
 openssl
+openssl@1.1
 pcre
 pkg-config
 polipo
