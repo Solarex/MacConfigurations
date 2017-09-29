@@ -121,6 +121,7 @@ alias mainlog="adb logcat -v threadtime | tee `date +%F-%H-%M-%S`.main"
 alias eventlog="adb logcat -v threadtime -b events | tee `date +%F-%H-%M-%S`.events"
 alias startpostgres="postgres -D /usr/local/var/postgres"
 alias startmongod="mongod --config /usr/local/etc/mongod.conf"
+alias node="node --use-strict"
 
 function greps(){
     #grep -nrHi "$@" .
@@ -294,3 +295,6 @@ LC_TELEPHONE="en_US.UTF-8"
 LC_MEASUREMENT="en_US.UTF-8"
 LC_IDENTIFICATION="en_US.UTF-8"
 LC_ALL=en_US.UTF-8
+
+PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"

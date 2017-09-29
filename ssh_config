@@ -2,7 +2,7 @@ Host ubuntu
 user houruhou
 
 KeepAlive yes
-ServerAliveInterval 10
+ServerAliveInterval=30
 
 Host github.com
     User                    git

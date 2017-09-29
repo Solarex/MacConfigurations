@@ -8,6 +8,7 @@ automake
 boxes
 bsdiff
 bsdmake
+c-ares
 cctools
 cheat
 cloog
@@ -21,6 +22,7 @@ docbook
 docbook-xsl
 dos2unix
 faac
+fdk-aac
 ffmpeg
 findutils
 fontconfig
@@ -36,6 +38,7 @@ gmp4
 gmp@4
 gnu-getopt
 gnu-sed
+go
 graphviz
 hexedit
 hub
@@ -56,11 +59,14 @@ libgpg-error
 libksba
 libmpc08
 libmpc@0.8
+libogg
 libpng
 libsodium
 libtiff
 libtool
 libvo-aacenc
+libvorbis
+libvpx
 libyaml
 libzip
 lsof
@@ -74,6 +80,7 @@ nvm
 oniguruma
 openssl
 openssl@1.1
+opus
 pcre
 pkg-config
 polipo
