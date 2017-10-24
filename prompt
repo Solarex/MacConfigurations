@@ -298,6 +298,7 @@ LC_ALL=en_US.UTF-8
 
 PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+PATH="/Users/houruhou/Software/bin/jadx/build/jadx/bin:$PATH"
 
 
 #git completion
