@@ -67,6 +67,7 @@ gen/
 # Gradle files
 .gradle/
 build/
+*.iml
 
 # Android Studio files
 .idea

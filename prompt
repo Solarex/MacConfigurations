@@ -98,7 +98,6 @@ PATH="/usr/local/opt/sqlite/bin:$PATH"
 export VISUAL=vim
 export EDITOR=vim
 export HOMEBREW_EDITOR=vim
-export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom"
 GRADLE_HOME="/Users/houruhou/.gradle"
 
 #function
@@ -185,6 +184,7 @@ alias getpicattr="sips -g pixelWidth -g pixelHeight "
 alias ss="/usr/local/opt/shadowsocks-libev/bin/ss-local -v -c /Users/houruhou/Software/confs/sslocal.json" 
 alias npm="npm --registry=https://registry.npm.taobao.org"
 alias methodtime="java -jar /Users/houruhou/Software/confs/methodtime-trace-analysis.jar"
+alias cpp='c++ -std=c++11 -stdlib=libc++'
 
 
 # System.err to grep stacktrace information of catched exceptions
