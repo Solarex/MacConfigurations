@@ -95,6 +95,7 @@ PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
 PATH="/usr/local/Cellar/dos2unix/7.3.1/bin:$PATH"
 PATH="/usr/local/Cellar/rsync/3.1.2/bin:$PATH"
 PATH="/usr/local/opt/sqlite/bin:$PATH"
+PATH="/usr/local/opt/shadowsocks-libev/bin/:$PATH"
 export VISUAL=vim
 export EDITOR=vim
 export HOMEBREW_EDITOR=vim
@@ -187,6 +188,14 @@ alias methodtime="java -jar /Users/houruhou/Software/confs/methodtime-trace-anal
 alias cpp='c++ -std=c++11 -stdlib=libc++'
 alias monitor='/Users/houruhou/Library/Android/sdk/tools/monitor'
 
+# git alias
+alias gcm="git co main-develop"
+alias gcd="git co develop"
+alias gmm="git merge main-develop"
+alias gpull="git pull"
+alias gpush="git push"
+alias gss="git stash save"
+alias gsp="git stash pop"
 
 # System.err to grep stacktrace information of catched exceptions
 # #AndroidRuntime to grep stacktrace information of uncaughted runtime exceptions
