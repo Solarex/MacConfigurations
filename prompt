@@ -153,6 +153,10 @@ function dex-method-count-by-package() {
 #alias polipo='polipo -c /Users/houruhou/Software/confs/polipo.conf'
 alias polipo='/usr/local/bin/polipo socksParentProxy=localhost:8888'
 
+function axml() {
+    java -jar /Users/houruhou/Software/confs/axmlprinter-0.1.7.jar "$@"
+}
+
 #alias
 alias cp='cp -i'
 alias mv='mv -i'
