@@ -157,6 +157,10 @@ function axml() {
     java -jar /Users/houruhou/Software/confs/axmlprinter-0.1.7.jar "$@"
 }
 
+function md() {
+    open -a typora "$@"
+}
+
 #alias
 alias cp='cp -i'
 alias mv='mv -i'
@@ -164,7 +168,6 @@ alias rm='rm -i'
 alias sl='ls'
 alias l='ls'
 alias grep='grep --color=auto -i '
-alias md="open -a MacDown"
 alias showandroid="cat ~/Workspace/OpenSource/local_android_installs"
 alias showbuild="cat ~/Workspace/OpenSource/build_sample.gradle"
 alias showkeyboard="open /Users/houruhou/Pictures/ScreenShots/keyboard.png"
@@ -172,18 +175,11 @@ alias showshortcuts="open /Users/houruhou/Pictures/ScreenShots/AS_ShortCuts.png"
 alias showgradle="tree -L 3 /Users/houruhou/.gradle/wrapper/dists"
 alias shark="java -jar /Users/houruhou/Software/confs/classyshark_3.2.jar"
 alias st="open -a SourceTree"
-alias eclipsegoogle="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-20140702/eclipse/Eclipse.app --args -data /Users/houruhou/Workspace/Solarex/EclipseWorkspace"
-alias eclipseopensource="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-20140702/eclipse/Eclipse.app --args -data /Users/houruhou/Workspace/Solarex/EclipseWorkspace4Opensouce"
-alias eclipseclean="open -n /Users/houruhou/Software/bin/adt-bundle-mac-x86_64-20140702/eclipse/Eclipse.app --args -data /Users/houruhou/Workspace/Solarex/EclipseWorkspace4Opensouce/clean"
 alias flushdns="sudo killall -HUP mDNSResponder"
-alias fuckgfw="open -n /Users/houruhou/Software/zipfile/appified-xx-net/XX-Net.app"
 alias showtvwifi="adb shell dumpsys netstats | grep -E 'iface=wlan.*networkId' | cut -d \\\" -f2"
 alias showtvip="adb shell netcfg | grep wlan"
 alias applaunch="adb logcat | grep -v InputReader | grep AppLaunch"
 alias getip="ifconfig | grep inet | grep broadcast"
-alias card="http http://cloudservice26.kingsoft-office-service.com/cards version=9.7 firstchannel=cn00999 channel=cn00999 deviceid=be06dd4bc4ce00e0701fecf86dad43d2 package=cn.wps.moffice lang=zh-CN beta=false sdkversion=23 --print=b -o card"
-alias infinite="http 'http://cloudservice22.kingsoft-office-service.com/ad?ad_height=1645&ad_width=1080&android_id=2d8b2887a2eafa39&android_id_md5=3949b6cdc1a9e7b433021aba8f7abfd6&android_id_sha1=4c27d2d724c25316ba6c403dec31df9935ba5545&app_version=9.7&brand=Xiaomi&channel=cn00999&country=CN&device_screen_size=2&device_type=phone&dip=2.75&dpi=440&gaid=&imei=&ip=10.20.140.81&lang=zh&mac=02%3A00%3A00%3A00%3A00%3A00&manufacturer=Xiaomi&mcc=0&mnc=0&model=MI+NOTE+LTE&network_type=wifi&osversion=6.0.1&osversion_int=23&package_name=cn.wps.moffice&platform=android&screen_height=1920&screen_width=1080&tzone=%2B0800&tzone_offset=28800000&uid=3949b6cdc1a9e7b433021aba8f7abfd6&user_agent=Mozilla%2F5.0+%28Linux%3B+Android+6.0.1%3B+MI+NOTE+LTE+Build%2FMMB29M%3B+wv%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Version%2F4.0+Chrome%2F46.0.2490.76+Mobile+Safari%2F537.36&ad_type=6'"
-alias nav="http http://cloudservice29.kingsoft-office-service.com/nav version=9.7 firstchannel=cn00999 channel=cn00999 deviceid=3949b6cdc1a9e7b433021aba8f7abfd6 package=cn.wps.moffice lang=zh-CN beta=false sdkversion=23"
 alias initconfig="cp /Users/houruhou/Software/confs/config.gradle ."
 alias getpicattr="sips -g pixelWidth -g pixelHeight "
 alias ss="/usr/local/opt/shadowsocks-libev/bin/ss-local -v -c /Users/houruhou/Software/confs/sslocal.json" 
@@ -200,6 +196,7 @@ alias gpull="git pull"
 alias gpush="git push"
 alias gss="git stash save"
 alias gsp="git stash pop"
+alias gsc="git stash clear"
 
 # System.err to grep stacktrace information of catched exceptions
 # #AndroidRuntime to grep stacktrace information of uncaughted runtime exceptions
