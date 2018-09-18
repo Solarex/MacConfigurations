@@ -14,6 +14,9 @@ set fileencoding=utf-8
 set fileencodings=utf-8,cp936,gbk,ucs-bom,gb2312,big5,euc-jp,euc-kr,latin1
 set fileformat=unix
 set fileformats=unix,dos,mac
+set enc=utf8
+set fencs=utf8,gbk,gb2312,gb18030
+set termencoding=utf-8
 
 " leader key
 let mapleader = ","
