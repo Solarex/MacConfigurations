@@ -5,6 +5,7 @@ aria2
 asciidoc
 autoconf
 automake
+boost
 boxes
 bsdiff
 bsdmake
@@ -68,6 +69,7 @@ libmpc@0.8
 libogg
 libpng
 libsodium
+libssh2
 libtiff
 libtool
 libunistring
@@ -76,6 +78,7 @@ libvorbis
 libvpx
 libyaml
 libzip
+little-cms2
 lsof
 lua
 mbedtls
@@ -89,6 +92,7 @@ mtr
 ncdu
 nvm
 oniguruma
+openjpeg
 openssl
 openssl@1.1
 opus
@@ -107,10 +111,15 @@ readline
 rename
 rsync
 ruby
+scrcpy
+sdl2
 shadowsocks-libev
+snappy
+source-highlight
 sqlite
 texi2html
 the_silver_searcher
+theora
 tig
 tldr
 tree
@@ -119,6 +128,7 @@ unrar
 webp
 wget
 x264
+x265
 xmlto
 xvid
 xz
