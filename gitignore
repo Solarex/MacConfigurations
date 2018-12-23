@@ -127,7 +127,8 @@ dist/
 # downloads/
 eggs/
 .eggs/
-lib/
+# 2018-12-23,comment this line becase flutter use the lib directory
+# lib/
 lib64/
 parts/
 sdist/
