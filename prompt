@@ -336,4 +336,5 @@ function cdd() {
     ls
 }
 
-alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+# -rr - read-only mode (prevents delete and spawn shell)
+alias ncdur="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
