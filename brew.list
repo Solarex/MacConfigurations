@@ -19,6 +19,7 @@ coreutils
 ctags
 curl
 dex2jar
+diff-so-fancy
 docbook
 docbook-xsl
 dos2unix
@@ -34,6 +35,7 @@ gd
 gdbm
 gettext
 git
+git-quick-stats
 glib
 gmp
 gmp4
@@ -67,6 +69,7 @@ libksba
 libmpc08
 libmpc@0.8
 libogg
+libomp
 libpng
 libsodium
 libssh2
