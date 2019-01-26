@@ -16,16 +16,18 @@
 
 [color]
   # Use colors in Git commands that are capable of colored output when outputting to the terminal
-  ui = auto
+	ui = true
 [color "branch"]
   current = yellow reverse
   local = yellow
   remote = green
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+	meta = yellow
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	commit = yellow bold
+	whitespace = red reverse
 [color "status"]
   added = yellow
   changed = green
@@ -42,6 +44,7 @@
 	excludesfile = /Users/houruhou/Software/confs/gitignore
 	editor = vim
 	quotepath = false
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [diff]
 	tool = diffmerge
 [difftool "diffmerge"]
@@ -70,3 +73,10 @@
 	logoutputencoding = utf-8
 [remote "origin"]
 	push = HEAD
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[diff-so-fancy]
+	stripLeadingSymbols = false
