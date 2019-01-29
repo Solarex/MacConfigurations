@@ -1,4 +1,4 @@
 id_rsa*
-*.json
+*.json*
 tokens
 *.backup
