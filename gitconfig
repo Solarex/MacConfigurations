@@ -80,3 +80,6 @@
 	newHighlight = green bold 22
 [diff-so-fancy]
 	stripLeadingSymbols = false
+[http "https://github.com"]
+	proxy = http://127.0.0.1:8123
+	sslVerify = false
