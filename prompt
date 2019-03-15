@@ -338,3 +338,4 @@ function cdd() {
 
 # -rr - read-only mode (prevents delete and spawn shell)
 alias ncdur="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+export ALL_PROXY=socks5://127.0.0.1:8888
