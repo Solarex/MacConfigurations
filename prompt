@@ -347,3 +347,5 @@ function cfrc() {
 function cfrj() {
     java -jar /Users/houruhou/Software/confs/cfr-0.140.jar $1 --outputdir $2
 }
+
+alias jol='java -jar /Users/houruhou/Software/confs/jol-cli-0.9-full.jar'
