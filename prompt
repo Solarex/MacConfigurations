@@ -349,3 +349,21 @@ function cfrj() {
 }
 
 alias jol='java -jar /Users/houruhou/Software/confs/jol-cli-0.9-full.jar'
+
+adblog() {
+    adb logcat -c
+    adb logcat -c
+    suffix=`date +%F-%H-%M-%S`
+    adb logcat -v threadtime | tee $suffix.log
+}
+alog(){
+    adb logcat -c
+    adb logcat -c
+    suffix=`date +%F-%H-%M-%S`
+    adb logcat -v threadtime | grep -i --color=auto "$@" | tee $suffix.$@.log
+}
+adbs(){
+    suffix=`date +%F-%H-%M-%S`
+    adb logcat -v threadtime -s "$@" | tee $suffix."$@".log
+}
+
