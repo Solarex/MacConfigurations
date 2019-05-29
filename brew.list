@@ -116,6 +116,7 @@ mpfr2
 mpfr@2
 mtr
 ncdu
+ncurses
 nettle
 ninja
 nvm
@@ -160,6 +161,7 @@ the_silver_searcher
 theora
 tig
 tldr
+tmux
 tree
 udns
 unbound
