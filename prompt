@@ -367,6 +367,7 @@ adbs(){
     adb logcat -v threadtime -s "$@" | tee $suffix."$@".log
 }
 
+
 #
 # Installation:
 #
@@ -425,5 +426,5 @@ fi
 
 ###-end-flutter-completion-###
 
-## Generated 2019-05-23 03:10:56.102735Z
+## Generated 2019-05-29 08:07:07.002485Z
 ## By /Users/houruhou/Workspace/Android/FlutterDev/flutter/bin/cache/flutter_tools.snapshot
