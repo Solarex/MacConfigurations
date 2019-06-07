@@ -1,7 +1,7 @@
 /**
  * genpac 2.1.0 https://github.com/JinnLynn/genpac
- * Generated: 2019-03-27 21:44:08
- * GFWList Last-Modified: 2019-03-16 05:05:00
+ * Generated: 2019-06-07 22:17:41
+ * GFWList Last-Modified: 2019-05-23 00:27:18
  * GFWList From: online[https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt]
  */
 
@@ -210,6 +210,7 @@ var rules = [
             "99cn.info",
             "9bis.com",
             "9bis.net",
+            "9gag.com",
             "a-normal-day.com",
             "aamacau.com",
             "abc.com",
@@ -316,6 +317,7 @@ var rules = [
             "amazon.com",
             "amazonaws.com",
             "ameblo.jp",
+            "america.gov",
             "american.edu",
             "americangreencard.com",
             "americanunfinished.com",
@@ -412,6 +414,7 @@ var rules = [
             "art4tibet1998.org",
             "arte.tv",
             "artofpeacefoundation.org",
+            "artstation.com",
             "artsy.net",
             "asacp.org",
             "asdfg.jp",
@@ -494,6 +497,7 @@ var rules = [
             "baramangaonline.com",
             "barenakedislam.com",
             "barnabu.co.uk",
+            "barton.de",
             "bartvpn.com",
             "bash-hackers.org",
             "bastillepost.com",
@@ -872,6 +876,7 @@ var rules = [
             "chinalawtranslate.com",
             "chinamule.com",
             "chinamz.org",
+            "chinanewscenter.com",
             "chinapost.com.tw",
             "chinapress.com.my",
             "chinarightsia.org",
@@ -1728,6 +1733,7 @@ var rules = [
             "fuckcnnic.net",
             "fuckgfw.org",
             "fuckgfw233.org",
+            "fulione.com",
             "fullerconsideration.com",
             "fulue.com",
             "funf.tw",
@@ -2710,6 +2716,7 @@ var rules = [
             "jp.net",
             "jpopforum.net",
             "jqueryui.com",
+            "jshell.net",
             "jtvnw.net",
             "jubushoushen.com",
             "juhuaren.com",
@@ -2886,6 +2893,7 @@ var rules = [
             "lidecheng.com",
             "lifemiles.com",
             "lighten.org.tw",
+            "lighti.me",
             "lightnovel.cn",
             "lihkg.com",
             "like.com",
@@ -3669,6 +3677,7 @@ var rules = [
             "pinkrod.com",
             "pinoy-n.com",
             "pinterest.at",
+            "pinterest.ca",
             "pinterest.co.kr",
             "pinterest.co.uk",
             "pinterest.com",
@@ -3699,6 +3708,7 @@ var rules = [
             "plm.org.hk",
             "plunder.com",
             "plurk.com",
+            "plus.codes",
             "plus28.com",
             "plusbb.com",
             "pmatehunter.com",
@@ -3746,6 +3756,7 @@ var rules = [
             "post852.com",
             "postadult.com",
             "postimg.org",
+            "potato.im",
             "potvpn.com",
             "power.com",
             "powerapple.com",
@@ -4222,6 +4233,7 @@ var rules = [
             "softether-download.com",
             "softether.co.jp",
             "softether.org",
+            "softfamous.com",
             "softlayer.net",
             "softsmirror.cf",
             "softwarebychuck.com",
@@ -4722,7 +4734,6 @@ var rules = [
             "tsquare.tv",
             "tsu.org.tw",
             "tsunagarumon.com",
-            "tt-rss.org",
             "tt1069.com",
             "tttan.com",
             "ttv.com.tw",
@@ -5259,6 +5270,7 @@ var rules = [
             "workerdemo.org.hk",
             "workerempowerment.org",
             "workersthebig.net",
+            "workflow.is",
             "worldcat.org",
             "worldjournal.com",
             "worldvpn.net",
