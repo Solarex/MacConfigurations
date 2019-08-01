@@ -55,6 +55,7 @@ go
 graphite2
 graphviz
 groovy
+gts
 harfbuzz
 hexedit
 highlight
@@ -66,6 +67,7 @@ isl
 isl011
 isl@0.11
 isl@0.12
+jasper
 jenv
 jnettop
 jpeg
@@ -106,6 +108,7 @@ libzip
 little-cms2
 lsof
 lua
+lzo
 mbedtls
 meson
 mitmproxy
@@ -117,8 +120,10 @@ mpfr@2
 mtr
 ncdu
 ncurses
+netpbm
 nettle
 ninja
+ntfs-3g
 nvm
 oniguruma
 opencore-amr
