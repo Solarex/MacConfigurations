@@ -1,0 +1,42 @@
+function d2o() {
+    for num in $@; do
+        printf '%-8s%8o\n' $num $num
+    done
+}
+ 
+function d2h() {
+    for num in $@; do
+        printf '%-8s%8x\n' $num $num
+    done
+}
+ 
+function d2H() {
+    for num in $@; do
+        printf '%-8s%8X\n' $num $num
+    done
+}
+function o2d() {
+    for num in $@; do
+        printf '%-8s' $num
+        if [[ $num != 0* ]]; then
+            num=0$num
+        fi
+
+        printf '%8d\n' $num
+    done
+}
+function h2d() {
+    for num in $@; do
+        printf '%-8s' $num
+        if [[ $num != 0x* ]] && [[ $num != 0X* ]]; then
+            num=0x$num
+        fi
+
+        printf '%d\n' $num
+    done
+}
+function d2b() {
+    for num in $@; do
+        perl -e 'printf "%-8d%8b\n",'"$num, $num"
+    done
+}
