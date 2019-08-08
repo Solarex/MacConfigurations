@@ -40,3 +40,11 @@ function d2b() {
         perl -e 'printf "%-8d%8b\n",'"$num, $num"
     done
 }
+function c2d() {
+    for str in $@; do
+        for (( i=0; i<${#str}; i++ )); do
+            c=${str:$i:1}
+            printf '%-8c%8d\n' $c "'$c"
+        done
+    done
+}
