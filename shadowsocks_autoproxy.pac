@@ -1,11 +1,11 @@
 /**
  * genpac 2.1.0 https://github.com/JinnLynn/genpac
- * Generated: 2019-07-01 09:43:23
- * GFWList Last-Modified: 2019-05-23 00:27:18
+ * Generated: 2019-08-25 09:29:37
+ * GFWList Last-Modified: 2019-08-09 13:11:16
  * GFWList From: online[https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt]
  */
 
-var proxy = 'SOCKS5 127.0.0.1:8888';
+var proxy = 'SOCKS5 127.0.0.1:1080';
 var rules = [
     [
         [],
@@ -706,6 +706,7 @@ var rules = [
             "busayari.com",
             "businessinsider.com",
             "businessinsider.com.au",
+            "businesstoday.com.tw",
             "businessweek.com",
             "busu.org",
             "busytrade.com",
@@ -1217,6 +1218,7 @@ var rules = [
             "dmm.com",
             "dns-dns.com",
             "dns-stuff.com",
+            "dns.google",
             "dns04.com",
             "dns05.com",
             "dns1.us",
@@ -1384,6 +1386,7 @@ var rules = [
             "emulefans.com",
             "emuparadise.me",
             "enanyang.my",
+            "encyclopedia.com",
             "enewstree.com",
             "enfal.de",
             "engadget.com",
