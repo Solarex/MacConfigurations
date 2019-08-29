@@ -154,7 +154,7 @@ function dex-method-count-by-package() {
     rm -rf $dir
 }
 #alias polipo='polipo -c /Users/houruhou/Software/confs/polipo.conf'
-alias pp='/usr/local/bin/polipo socksParentProxy=localhost:8888'
+alias pp='/usr/local/bin/polipo socksParentProxy=localhost:1080'
 
 function axml() {
     java -jar /Users/houruhou/Software/confs/axmlprinter-0.1.7.jar "$@"
@@ -283,7 +283,7 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 function getpac(){
     ss&
     pyenv activate dev
-    genpac --proxy="SOCKS5 127.0.0.1:8888" --gfwlist-proxy="SOCKS5 127.0.0.1:8888" -o /Users/houruhou/Software/confs/shadowsocks_autoproxy.pac --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+    genpac --proxy="SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" -o /Users/houruhou/Software/confs/shadowsocks_autoproxy.pac --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
 }
 
 #node
@@ -338,7 +338,7 @@ function cdd() {
 
 # -rr - read-only mode (prevents delete and spawn shell)
 alias ncdur="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
-export ALL_PROXY=socks5://127.0.0.1:8888
+export ALL_PROXY=socks5://127.0.0.1:1080
 
 function cfrc() {
     java -jar /Users/houruhou/Software/confs/cfr-0.140.jar $1
