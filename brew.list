@@ -158,6 +158,7 @@ sdl2
 shadowsocks-libev
 shared-mime-info
 snappy
+socat
 source-highlight
 speex
 sqlite
