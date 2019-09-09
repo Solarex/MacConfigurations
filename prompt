@@ -367,6 +367,12 @@ adbs(){
     adb logcat -v threadtime -s "$@" | tee $suffix."$@".log
 }
 
+freev(){
+    name=`date +%F-%R`.txt
+    curl https://jiang.netlify.com/ -o $name
+    cat $name | base64 -d
+}
+
 
 #
 # Installation:
