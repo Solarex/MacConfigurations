@@ -373,6 +373,8 @@ freev(){
     cat $name | base64 -d
 }
 
+# jad
+PATH=$PATH:/Users/houruhou/Software/confs/jad158g.mac.intel
 
 #
 # Installation:
