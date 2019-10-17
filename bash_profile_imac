@@ -1,0 +1,136 @@
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$JAVA_HOME/bin:$PATH
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
+  export TERM=gnome-256color
+elif infocmp xterm-256color >/dev/null 2>&1; then
+  export TERM=xterm-256color
+fi
+
+if tput setaf 1 &> /dev/null; then
+  tput sgr0
+  if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
+    # Changed these colors to fit Solarized theme
+    MAGENTA=$(tput setaf 125)
+    ORANGE=$(tput setaf 166)
+    GREEN=$(tput setaf 64)
+    PURPLE=$(tput setaf 61)
+    WHITE=$(tput setaf 244)
+  else
+    MAGENTA=$(tput setaf 5)
+    ORANGE=$(tput setaf 4)
+    GREEN=$(tput setaf 2)
+    PURPLE=$(tput setaf 1)
+    WHITE=$(tput setaf 7)
+  fi
+  BOLD=$(tput bold)
+  RESET=$(tput sgr0)
+else
+  MAGENTA="\033[1;31m"
+  ORANGE="\033[1;33m"
+  GREEN="\033[1;32m"
+  PURPLE="\033[1;35m"
+  WHITE="\033[1;37m"
+  BOLD=""
+  RESET="\033[m"
+fi
+
+export MAGENTA
+export ORANGE
+export GREEN
+export PURPLE
+export WHITE
+export BOLD
+export RESET
+
+function parse_git_dirty() {
+  [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
+}
+
+function parse_git_branch() {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+}
+
+function watch(){
+    while :;
+    do
+        clear
+        date
+        $1
+        sleep $2
+    done
+}
+
+export PS1="\[${BOLD}${MAGENTA}\]\u \[$GREEN\]@ \t \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+export PS2="\[$ORANGE\]→ \[$RESET\]"
+
+#bind key
+bind 'set completion-ignore-case on'
+#bind 'set completion-prefix-display-length 2'
+#bind 'skip-completed-text on'
+#bind 'visible-stats on'
+# do not show hidden files in the list
+bind 'set match-hidden-files off'
+bind 'set show-all-if-ambiguous on'
+
+shopt -s cdspell
+
+#function
+function cdcls(){
+    cd "$@";clear
+}
+function mkcd(){
+    mkdir -p "$@";cd "$@";clear
+}
+function adblog(){
+    adb logcat -c
+    suffix=`date +%F-%H-%M-%S`
+    adb logcat -v threadtime | tee $suffix.log
+}
+function greps(){
+    #grep -nrHi "$@" .
+    grep -i --color=auto -nrHi --exclude-dir={.git,.svn,lib,.gradle,.idea,captures,build,bin,gen} --exclude={*.png,*.jpg,*.jar,*.webp,*.bmp,*.svg} -E "$@" .
+}
+function md() {
+    open -a typora "$@"
+}
+
+alias npm="npm --registry=https://registry.npm.taobao.org"
+alias getpicattr="sips -g pixelWidth -g pixelHeight "
+# git alias
+alias gcm="git co main-develop"
+alias gcd="git co develop"
+alias gmm="git merge main-develop"
+alias gpull="git pull"
+alias gpush="git push"
+alias gss="git stash save"
+alias gsp="git stash pop"
+alias gsc="git stash clear"
+
+alias mainlog="adb logcat -v threadtime | tee `date +%F-%H-%M-%S`.main"
+alias eventlog="adb logcat -v threadtime -b events | tee `date +%F-%H-%M-%S`.events"
+alias cls='clear'
+
+#z
+. `brew --prefix`/etc/profile.d/z.sh
+alias vv='v2ray -config=/Users/houruhou/Software/confs/solarex.json'
+EDITOR=vim
+HOMEBREW_EDITOR=vim
+PATH=$PATH:/Users/houruhou/icarbonx-android/flutter_dev/flutter/bin
+
+ANDROID_HOME=/Users/houruhou/Library/Android/sdk
+PATH=$PATH:/Users/houruhou/Library/Android/sdk/tools:/Users/houruhou/Library/Android/sdk/platform-tools
+
+ssh-add /Users/houruhou/Software/imac-confs/id_rsa.github > /dev/null 2>&1
+ssh-add /Users/houruhou/Software/imac-confs/id_rsa.icarbonx > /dev/null 2>&1
+# flutter
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
