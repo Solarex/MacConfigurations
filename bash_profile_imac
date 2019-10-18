@@ -134,3 +134,6 @@ ssh-add /Users/houruhou/Software/imac-confs/id_rsa.icarbonx > /dev/null 2>&1
 # flutter
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
+# git bash completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"

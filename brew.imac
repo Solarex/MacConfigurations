@@ -1,5 +1,6 @@
 aom
 autoconf
+bash-completion
 cairo
 diff-so-fancy
 ffmpeg
@@ -11,6 +12,7 @@ fribidi
 gdbm
 gettext
 giflib
+git
 glib
 gmp
 gnutls
@@ -40,6 +42,7 @@ libvorbis
 libvpx
 little-cms2
 lzo
+ncdu
 nettle
 oniguruma
 opencore-amr
@@ -48,6 +51,7 @@ openssl@1.1
 opus
 p11-kit
 pcre
+pcre2
 pixman
 pkg-config
 pyenv
