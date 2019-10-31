@@ -118,6 +118,7 @@ alias gsc="git stash clear"
 alias mainlog="adb logcat -v threadtime | tee `date +%F-%H-%M-%S`.main"
 alias eventlog="adb logcat -v threadtime -b events | tee `date +%F-%H-%M-%S`.events"
 alias cls='clear'
+alias topactivity="adb shell dumpsys window windows | grep -E mCurrentFocus"
 
 #z
 . `brew --prefix`/etc/profile.d/z.sh

@@ -52,6 +52,7 @@ opus
 p11-kit
 pcre
 pcre2
+pidcat
 pixman
 pkg-config
 pyenv
