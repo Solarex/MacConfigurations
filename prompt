@@ -436,3 +436,5 @@ fi
 
 ## Generated 2019-05-29 08:07:07.002485Z
 ## By /Users/houruhou/Workspace/Android/FlutterDev/flutter/bin/cache/flutter_tools.snapshot
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
