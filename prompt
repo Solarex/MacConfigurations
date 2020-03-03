@@ -78,8 +78,9 @@ bind 'set show-all-if-ambiguous on'
 shopt -s cdspell
 
 #git
-ssh-add ~/Software/confs/id_rsa_github >/dev/null 2>&1
 ssh-add ~/Software/confs/id_rsa_meizu >/dev/null 2>&1
+ssh-add ~/Software/confs/id_rsa_github >/dev/null 2>&1
+ssh-add ~/Software/confs/id_rsa_github_solarex >/dev/null 2>&1
 ssh-add ~/.ssh/id_rsa.icarbonx > /dev/null 2>&1
 
 #path
