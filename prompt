@@ -86,47 +86,50 @@ ssh-add ~/.ssh/id_rsa.icarbonx > /dev/null 2>&1
 #path
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
 PATH=$PATH:/Users/houruhou/Software/bin/local
+
+#android
 ADT_HOME=/Users/houruhou/Library/Android/sdk
 PATH=$ADT_HOME/tools:$ADT_HOME/platform-tools:$ADT_HOME/build-tools/29.0.2:$PATH
+
+#brew
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
-#PATH="/usr/local/Cellar/findutils/4.4.2/bin:$PATH"
-PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
 PATH="/usr/local/Cellar/dos2unix/7.3.1/bin:$PATH"
+#PATH="/usr/local/Cellar/findutils/4.4.2/bin:$PATH"
 PATH="/usr/local/Cellar/rsync/3.1.2/bin:$PATH"
+PATH=/usr/local/opt/curl/bin:$PATH
 PATH="/usr/local/opt/sqlite/bin:$PATH"
-PATH="/usr/local/opt/shadowsocks-libev/bin/:$PATH"
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export PATH=/usr/local/opt/curl/bin:$PATH
+
+#go
+PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+#PATH="/usr/local/opt/shadowsocks-libev/bin/:$PATH"
+
+#ruby
+PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
+
+#jadx
+PATH=$PATH:/Users/houruhou/Software/bin/jadx/build/jadx/bin
+
 export VISUAL=vim
 export EDITOR=vim
 export HOMEBREW_EDITOR=vim
 GRADLE_HOME="/Users/houruhou/.gradle"
 
-#function
+#functions
 function cdcls(){
     cd "$@";clear
 }
+
 function mkcd(){
     mkdir -p "$@";cd "$@";clear
 }
-function adblog(){
-    adb logcat -c
-    suffix=`date +%F-%H-%M-%S`
-    adb logcat -v threadtime | tee $suffix.log
-}
+
 function svnlog(){
     svn log --verbose | sed -n "/$1/,/-----$/ p"
 }
-alias clearlog="adb logcat -c && adb logcat -c && adb logcat -c && adb logcat -c"
-alias mainlog="adb logcat -v threadtime | tee `date +%F-%H-%M-%S`.main"
-alias eventlog="adb logcat -v threadtime -b events | tee `date +%F-%H-%M-%S`.events"
-alias startpostgres="postgres -D /usr/local/var/postgres"
-alias startmongod="mongod --config /usr/local/etc/mongod.conf"
-alias node="node --use-strict"
-
 function greps(){
     #grep -nrHi "$@" .
     grep -i --color=auto -nrHi --exclude-dir={.git,.svn,lib,.gradle,.idea,captures,build,bin,gen} --exclude={*.png,*.jpg,*.jar,*.webp,*.bmp,*.svg} -E "$@" .
@@ -137,7 +140,6 @@ function text(){
 function pogai(){
     say -v Sin-ji "$@"
 }
-
 function dex-method-count() {
     cat $1 | head -c 92 | tail -c 4 | hexdump -e '1/4 "%d\n"'
 }
@@ -154,9 +156,6 @@ function dex-method-count-by-package() {
     cd -
     rm -rf $dir
 }
-#alias polipo='polipo -c /Users/houruhou/Software/confs/polipo.conf'
-alias pp='/usr/local/bin/polipo socksParentProxy=localhost:1080'
-
 function axml() {
     java -jar /Users/houruhou/Software/confs/axmlprinter-0.1.7.jar "$@"
 }
@@ -164,6 +163,73 @@ function axml() {
 function md() {
     open -a typora "$@"
 }
+# System.err to grep stacktrace information of catched exceptions
+# #AndroidRuntime to grep stacktrace information of uncaughted runtime exceptions
+# #MessageQueue to grep exceptions happended during MessageQueue
+# #CONSOLE to grep console message releated with javascript console.info
+# #dalvikvm informations about dalvik vm 
+# #StrictMode information about StrictMode warnings
+function debug(){
+    adb logcat |grep --color=always -E "System.err|AndroidRuntime|MessageQueue|CONSOLE|W/Bundle|dalvikvm|StrictMode"
+}
+
+#genpac
+function getpac(){
+    genpac --proxy="SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" -o /Users/houruhou/Software/confs/shadowsocks_autoproxy.pac --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+}
+
+function cdls() {
+    cd $1
+    ls
+}
+
+function cfrc() {
+    java -jar /Users/houruhou/Software/confs/cfr-0.140.jar $1
+}
+
+function cfrj() {
+    java -jar /Users/houruhou/Software/confs/cfr-0.140.jar $1 --outputdir $2
+}
+
+adblog() {
+    suffix=`date +%F-%H-%M-%S`
+    adb logcat -v threadtime | tee $suffix.log
+}
+greplog(){
+    suffix=`date +%F-%H-%M-%S`
+    adb logcat -v threadtime | grep -i --color=auto "$@" | tee $suffix.$@.log
+}
+adblogs(){
+    suffix=`date +%F-%H-%M-%S`
+    adb logcat -v threadtime -s "$@" | tee $suffix."$@".log
+}
+
+freev(){
+    name=`date +%F-%R`.txt
+    curl https://jiang.netlify.com/ -o $name
+    cat $name | base64 -d
+}
+
+
+
+
+
+
+
+
+
+
+
+
+alias clearlog="adb logcat -c && adb logcat -c && adb logcat -c && adb logcat -c"
+alias mainlog="adb logcat -v threadtime | tee `date +%F-%H-%M-%S`.main"
+alias eventlog="adb logcat -v threadtime -b events | tee `date +%F-%H-%M-%S`.events"
+alias startpostgres="postgres -D /usr/local/var/postgres"
+alias startmongod="mongod --config /usr/local/etc/mongod.conf"
+alias node="node --use-strict"
+
+#alias polipo='polipo -c /Users/houruhou/Software/confs/polipo.conf'
+#alias pp='/usr/local/bin/polipo socksParentProxy=localhost:1080'
 
 #alias
 alias cp='cp -i'
@@ -191,6 +257,10 @@ alias npm="npm --registry=https://registry.npm.taobao.org"
 alias methodtime="java -jar /Users/houruhou/Software/confs/methodtime-trace-analysis.jar"
 alias cpp='c++ -std=c++11 -stdlib=libc++'
 alias monitor='/Users/houruhou/Library/Android/sdk/tools/monitor'
+alias jol='java -jar /Users/houruhou/Software/confs/jol-cli-0.9-full.jar'
+
+# -rr - read-only mode (prevents delete and spawn shell)
+alias ncdur="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 
 # git alias
 alias gcm="git co main-develop"
@@ -201,16 +271,6 @@ alias gpush="git push"
 alias gss="git stash save"
 alias gsp="git stash pop"
 alias gsc="git stash clear"
-
-# System.err to grep stacktrace information of catched exceptions
-# #AndroidRuntime to grep stacktrace information of uncaughted runtime exceptions
-# #MessageQueue to grep exceptions happended during MessageQueue
-# #CONSOLE to grep console message releated with javascript console.info
-# #dalvikvm informations about dalvik vm 
-# #StrictMode information about StrictMode warnings
-function debug(){
-    adb logcat |grep --color=always -E "System.err|AndroidRuntime|MessageQueue|CONSOLE|W/Bundle|dalvikvm|StrictMode"
-}
 
 
 
@@ -246,30 +306,15 @@ decompile="/Users/houruhou/Workspace/OpenSource/decompile"
 #z
 . `brew --prefix`/etc/profile.d/z.sh
 
-#colorsvn
-#source /usr/local/etc/profile.d/colorsvn-env.sh
-
-#alias svn="colorsvn"
-
-alias fetchkey="curl http://dongfangad/toutiao_appkey/code"
-#todo:remove line break from input
-function fetchad(){
-    fetchkey
-    printf "\n----------------\n"
-    read -p "Input key:" key
-    echo $key
-    curl --data "key=$key\&type=toutiao\&pgnum=1\&ime=867451024812247\&apptypeid=solarex\&appver=1.1" http://dongfangad/toutiao_appnew/newspool
-    printf "\n"
-}
-
 #jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 #export JAVA8_HOME=`/usr/libexec/java_home -v1.8`
 JAVA_HOME=`/usr/libexec/java_home -v1.8`
+
 #gradle
-GRADLE_HOME="/Users/houruhou/.gradle/wrapper/dists/gradle-2.13-all/gradle-2.13"
-PATH=$PATH:$GRADLE_HOME/bin:
+#GRADLE_HOME="/Users/houruhou/.gradle/wrapper/dists/gradle-6.1.1-bin/4i3ntwqiazourd86epxcz427c/gradle-6.1.1"
+#PATH=$PATH:$GRADLE_HOME/bin:
 
 #android
 ANDROID_HOME="/Users/houruhou/Library/Android/sdk"
@@ -279,13 +324,6 @@ export ANDROID_HVPROTO=ddm
 
 #groovy
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
-
-#shadowsocks getpac
-function getpac(){
-    ss&
-    pyenv activate dev
-    genpac --proxy="SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" -o /Users/houruhou/Software/confs/shadowsocks_autoproxy.pac --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
-}
 
 #node
 export NVM_DIR="/Users/houruhou/Workspace/Solarex/NodeWorkspace"
@@ -310,8 +348,7 @@ LC_IDENTIFICATION="en_US.UTF-8"
 LC_ALL=en_US.UTF-8
 
 #PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
-MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
-PATH="/Users/houruhou/Software/bin/jadx/build/jadx/bin:$PATH"
+#MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 
 
 # flutter
@@ -331,51 +368,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-
-function cdd() {
-    cd $1
-    ls
-}
-
-# -rr - read-only mode (prevents delete and spawn shell)
-alias ncdur="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 export ALL_PROXY=socks5://127.0.0.1:1080
 
-function cfrc() {
-    java -jar /Users/houruhou/Software/confs/cfr-0.140.jar $1
-}
 
-function cfrj() {
-    java -jar /Users/houruhou/Software/confs/cfr-0.140.jar $1 --outputdir $2
-}
-
-alias jol='java -jar /Users/houruhou/Software/confs/jol-cli-0.9-full.jar'
-
-adblog() {
-    adb logcat -c
-    adb logcat -c
-    suffix=`date +%F-%H-%M-%S`
-    adb logcat -v threadtime | tee $suffix.log
-}
-alog(){
-    adb logcat -c
-    adb logcat -c
-    suffix=`date +%F-%H-%M-%S`
-    adb logcat -v threadtime | grep -i --color=auto "$@" | tee $suffix.$@.log
-}
-adbs(){
-    suffix=`date +%F-%H-%M-%S`
-    adb logcat -v threadtime -s "$@" | tee $suffix."$@".log
-}
-
-freev(){
-    name=`date +%F-%R`.txt
-    curl https://jiang.netlify.com/ -o $name
-    cat $name | base64 -d
-}
-
-# jad
-PATH=$PATH:/Users/houruhou/Software/confs/jad158g.mac.intel
 
 #
 # Installation:
