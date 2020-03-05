@@ -80,14 +80,14 @@ shopt -s cdspell
 #git
 ssh-add ~/Software/confs/id_rsa_meizu >/dev/null 2>&1
 ssh-add ~/Software/confs/id_rsa_github >/dev/null 2>&1
-ssh-add ~/Software/confs/id_rsa_github_solarex >/dev/null 2>&1
+#ssh-add ~/Software/confs/id_rsa_github_solarex >/dev/null 2>&1
 ssh-add ~/.ssh/id_rsa.icarbonx > /dev/null 2>&1
 
 #path
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
 PATH=$PATH:/Users/houruhou/Software/bin/local
 ADT_HOME=/Users/houruhou/Library/Android/sdk
-PATH=$ADT_HOME/tools:$ADT_HOME/platform-tools:$ADT_HOME/build-tools/23.0.2:$PATH
+PATH=$ADT_HOME/tools:$ADT_HOME/platform-tools:$ADT_HOME/build-tools/29.0.2:$PATH
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
