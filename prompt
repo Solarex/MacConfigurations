@@ -326,8 +326,10 @@ export ANDROID_HVPROTO=ddm
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 #node
+#. "$(brew --prefix nvm)/nvm.sh"
 export NVM_DIR="/Users/houruhou/Workspace/Solarex/NodeWorkspace"
-. "$(brew --prefix nvm)/nvm.sh"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 
 #locale
