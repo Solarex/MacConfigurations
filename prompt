@@ -81,6 +81,7 @@ shopt -s cdspell
 ssh-add ~/Software/confs/id_rsa_meizu >/dev/null 2>&1
 ssh-add ~/Software/confs/id_rsa_github >/dev/null 2>&1
 #ssh-add ~/Software/confs/id_rsa_github_solarex >/dev/null 2>&1
+ssh-add ~/Software/confs/id_rsa_gitee > /dev/null 2>&1
 ssh-add ~/.ssh/id_rsa.icarbonx > /dev/null 2>&1
 
 #path
@@ -106,9 +107,6 @@ PATH="/usr/local/opt/sqlite/bin:$PATH"
 PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 #PATH="/usr/local/opt/shadowsocks-libev/bin/:$PATH"
-
-#ruby
-PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
 
 #jadx
 PATH=$PATH:/Users/houruhou/Software/bin/jadx/build/jadx/bin
@@ -436,3 +434,7 @@ fi
 ## By /Users/houruhou/Workspace/Android/FlutterDev/flutter/bin/cache/flutter_tools.snapshot
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
+#ruby
+PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
+
+
