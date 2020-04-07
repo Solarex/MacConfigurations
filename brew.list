@@ -9,6 +9,7 @@ automake
 boost
 boxes
 brew-cask-completion
+broot
 bsdiff
 bsdmake
 c-ares
@@ -46,8 +47,6 @@ git
 git-quick-stats
 glib
 gmp
-gmp4
-gmp@4
 gnu-getopt
 gnu-sed
 gnutls
@@ -59,20 +58,19 @@ gts
 harfbuzz
 hexedit
 highlight
-hub
 icu4c
 ilmbase
 imagemagick
-isl
 isl011
 isl@0.11
-isl@0.12
 jasper
 jenv
 jnettop
 jpeg
 jq
 kotlin
+krb5
+ktlint
 lame
 leptonica
 libass
@@ -100,6 +98,7 @@ libtasn1
 libtiff
 libtool
 libunistring
+libvidstab
 libvo-aacenc
 libvorbis
 libvpx
@@ -113,7 +112,6 @@ mbedtls
 meson
 mitmproxy
 mobile-shell
-mongodb
 mosh
 mpfr2
 mpfr@2
@@ -128,6 +126,7 @@ nvm
 oniguruma
 opencore-amr
 openexr
+openjdk
 openjpeg
 openssl
 openssl@1.1
@@ -147,6 +146,7 @@ proxychains-ng
 pyenv
 python
 python@2
+python@3.8
 readline
 rename
 rsync
@@ -173,6 +173,7 @@ tree
 udns
 unbound
 unrar
+utf8proc
 v2ray-core
 webp
 wget
