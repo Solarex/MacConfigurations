@@ -438,3 +438,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
 
 
+#wumii
+PATH="/Users/houruhou/wumii/phabricator/arcanist/bin":$PATH
+source /Users/houruhou/wumii/phabricator/arcanist/resources/shell/bash-completion

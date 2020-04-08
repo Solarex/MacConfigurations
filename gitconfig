@@ -45,7 +45,7 @@
 	editor = vim
 	quotepath = false
 	pager = diff-so-fancy | less --tabs=4 -RFX
-	gitproxy = /Users/houruhou/Software/confs/gitproxy.sh
+    gitproxy = /Users/houruhou/Software/confs/gitproxy.sh
 [diff]
 	tool = diffmerge
 [difftool "diffmerge"]
@@ -61,7 +61,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /usr/local/Caskroom/sourcetree/2.0.5.8/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
 	name = Solarex
