@@ -137,6 +137,7 @@ alias rm='rm -i'
 alias sl='ls'
 alias l='ls'
 alias grep='grep --color=auto -i '
+alias cls='clear'
 
 JAVA_HOME=`/usr/libexec/java_home -v1.8`
 #android
@@ -168,3 +169,4 @@ LC_ALL=en_US.UTF-8
 
 alias wumii='adb shell dumpsys activity com.wumii.android.athena'
 alias window='adb shell dumpsys window windows'
+alias vv="v2ray -config=/Users/ruhouhou/software/v2ray/solarex.json"
