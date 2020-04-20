@@ -115,7 +115,7 @@ function mkcd(){
     mkdir -p "$@";cd "$@";clear
 }
 function greps(){
-    grep -i --color=auto -nrHi --exclude-dir={.git,.svn,lib,.gradle,.idea,captures,build,bin,gen} --exclude={*.png,*.jpg,*.jar,*.webp,*.bmp,*.svg} -E "$@" .
+    grep -i --color=auto -nrHi --exclude-dir={.git,.svn,lib,.gradle,.idea,captures,build,bin,gen} -E "$@" .
 }
 function md() {
     open -a typora "$@"
@@ -141,6 +141,8 @@ alias grep='grep --color=auto -i '
 JAVA_HOME=`/usr/libexec/java_home -v1.8`
 #android
 ANDROID_HOME="/Users/ruhouhou/Library/Android/sdk"
+ADT_HOME="/Users/ruhouhou/Library/Android/sdk"
+PATH=$ADT_HOME/tools:$ADT_HOME/platform-tools:$ADT_HOME/build-tools/29.0.2:$PATH
 #hierarchyviewer
 export ANDROID_HVPROTO=ddm
 
