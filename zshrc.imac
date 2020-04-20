@@ -104,3 +104,65 @@ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighti
 
 PATH="/Users/ruhouhou/phabricator/arcanist/bin":$PATH
 alias ad="arc diff --reviewers 'lyf, zhuyihao, wangshouchao, yedongsheng'"
+
+
+#functions
+function cdcls(){
+    cd "$@";clear
+}
+
+function mkcd(){
+    mkdir -p "$@";cd "$@";clear
+}
+function greps(){
+    grep -i --color=auto -nrHi --exclude-dir={.git,.svn,lib,.gradle,.idea,captures,build,bin,gen} --exclude={*.png,*.jpg,*.jar,*.webp,*.bmp,*.svg} -E "$@" .
+}
+function md() {
+    open -a typora "$@"
+}
+function cdls() {
+    cd $1
+    ls
+}
+adblog() {
+    suffix=`date +%F-%H-%M-%S`
+    adb logcat -v threadtime | tee $suffix.log
+}
+
+
+#alias
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias sl='ls'
+alias l='ls'
+alias grep='grep --color=auto -i '
+
+JAVA_HOME=`/usr/libexec/java_home -v1.8`
+#android
+ANDROID_HOME="/Users/ruhouhou/Library/Android/sdk"
+#hierarchyviewer
+export ANDROID_HVPROTO=ddm
+
+#locale
+LANG=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=en_US.UTF-8
+
+#git completion
+source /Users/ruhouhou/software/MacConfigurations/git-completion.sh
+
+alias wumii='adb shell dumpsys activity com.wumii.android.athena'
+alias window='adb shell dumpsys window windows'
