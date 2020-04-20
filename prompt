@@ -443,3 +443,4 @@ PATH="/Users/houruhou/wumii/phabricator/arcanist/bin":$PATH
 source /Users/houruhou/wumii/phabricator/arcanist/resources/shell/bash-completion
 alias wumii='adb shell dumpsys activity com.wumii.android.athena'
 alias window='adb shell dumpsys window windows'
+alias ad="arc diff --reviewers 'lyf, zhuyihao, wangshouchao, yedongsheng'"
