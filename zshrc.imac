@@ -143,7 +143,7 @@ JAVA_HOME=`/usr/libexec/java_home -v1.8`
 #android
 ANDROID_HOME="/Users/ruhouhou/Library/Android/sdk"
 ADT_HOME="/Users/ruhouhou/Library/Android/sdk"
-PATH=$ADT_HOME/tools:$ADT_HOME/platform-tools:$ADT_HOME/build-tools/29.0.2:$PATH
+PATH=$ADT_HOME/tools:$ADT_HOME/platform-tools:$ADT_HOME/build-tools/29.0.3:$PATH
 #hierarchyviewer
 export ANDROID_HVPROTO=ddm
 
