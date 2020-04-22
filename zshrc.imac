@@ -164,6 +164,10 @@ LC_MEASUREMENT="en_US.UTF-8"
 LC_IDENTIFICATION="en_US.UTF-8"
 LC_ALL=en_US.UTF-8
 
+export VISUAL=vim
+export EDITOR=vim
+export HOMEBREW_EDITOR=vim
+
 #git completion
 #source /Users/ruhouhou/software/MacConfigurations/git-completion.zsh
 
