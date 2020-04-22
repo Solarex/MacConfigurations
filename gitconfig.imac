@@ -46,6 +46,8 @@
 	quotepath = false
 	pager = diff-so-fancy | less --tabs=4 -RFX
     gitproxy = /Users/ruhouhou/software/MacConfigurations/gitproxy.sh
+	whitespace = cr-at-eol
+	autocrlf = input
 [diff]
 	tool = diffmerge
 [difftool "diffmerge"]
