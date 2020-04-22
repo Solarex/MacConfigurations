@@ -1,0 +1,86 @@
+[alias]
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  # Pretty log output
+  hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
+  co = checkout
+  st = status
+  br = branch
+  bra = branch -a
+  brd = branch -D
+  ci = commit
+  dt = difftool
+	g = grep --break --heading --line-number
+
+[color]
+  # Use colors in Git commands that are capable of colored output when outputting to the terminal
+	ui = true
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	commit = yellow bold
+	whitespace = red reverse
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+# Use `origin` as the default remote on the `master` branch in all cases
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+
+[credential]
+	helper = cache --timeout=36000000
+[core]
+	excludesfile = /Users/ruhouhou/software/MacConfigurations/gitignore
+	editor = vim
+	quotepath = false
+	pager = diff-so-fancy | less --tabs=4 -RFX
+    gitproxy = /Users/ruhouhou/software/MacConfigurations/gitproxy.sh
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = true
+[difftool]
+	prompt = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Solarex
+	email = rh.hou.work@gmail.com
+[grep]
+	lineNumber = true
+	extendRegexp = true
+[i18n]
+	commitencoding = utf-8
+	logoutputencoding = utf-8
+[remote "origin"]
+	push = HEAD
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[diff-so-fancy]
+	stripLeadingSymbols = false
+[http "https://github.com"]
+	proxy = http://127.0.0.1:8123
+	sslVerify = false
