@@ -174,3 +174,6 @@ export HOMEBREW_EDITOR=vim
 alias wumii='adb shell dumpsys activity com.wumii.android.athena'
 alias window='adb shell dumpsys window windows'
 alias vv="v2ray -config=/Users/ruhouhou/software/v2ray/solarex.json"
+
+ssh-add ~/.ssh/id_rsa_flyfire >/dev/null 2>&1
+ssh-add ~/.ssh/id_rsa_wumii >/dev/null 2>&1
