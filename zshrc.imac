@@ -179,3 +179,6 @@ ssh-add ~/.ssh/id_rsa_flyfire >/dev/null 2>&1
 ssh-add ~/.ssh/id_rsa_wumii >/dev/null 2>&1
 
 . /usr/local/etc/profile.d/z.sh
+
+// http://www.apkfuns.com/git-self-history-log/
+alias showme="git config user.email | xargs -n1 -I {} git log --pretty=format:"%h - %an, %ar : %s" --since=2.weeks --no-merges  --author={}"
