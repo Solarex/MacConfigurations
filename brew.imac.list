@@ -52,6 +52,8 @@ p11-kit
 pcre
 pidcat
 pixman
+pkg-config
+python
 python@3.8
 readline
 rsync
@@ -61,7 +63,9 @@ scrcpy
 sdl2
 snappy
 speex
+sphinx-doc
 sqlite
+srt
 tesseract
 theora
 tig
