@@ -146,6 +146,8 @@ alias showme="git config user.email | xargs -n1 -I {} git log --pretty=format:"%
 #git
 alias gp='git pull --rebase'
 
+alias adbc='adb logcat -c'
+
 
 JAVA_HOME=`/usr/libexec/java_home -v1.8`
 #android
