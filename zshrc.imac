@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 PATH="/Users/ruhouhou/phabricator/arcanist/bin":$PATH
-alias ad="arc diff --reviewers 'lyf, zhuyihao, wangshouchao, yedongsheng'"
+alias ad="arc diff --reviewers 'lyf, zhuyihao, wangshouchao, yuqiubo, huangwenzhong'"
 
 
 #functions
@@ -124,11 +124,13 @@ function cdls() {
     cd $1
     ls
 }
-adblog() {
+function adblog() {
     suffix=`date +%F-%H-%M-%S`
     adb logcat -v threadtime | tee $suffix.log
 }
-
+function mdd() {
+    open -a typora "$@"
+}
 
 #alias
 alias cp='cp -i'
@@ -138,6 +140,14 @@ alias sl='ls'
 alias l='ls'
 alias grep='grep --color=auto -i '
 alias cls='clear'
+# http://www.apkfuns.com/git-self-history-log/
+alias showme="git config user.email | xargs -n1 -I {} git log --pretty=format:"%h - %an, %ar : %s" --since=2.weeks --no-merges  --author={}"
+
+#git
+alias gp='git pull --rebase'
+
+alias adbc='adb logcat -c'
+
 
 JAVA_HOME=`/usr/libexec/java_home -v1.8`
 #android
@@ -179,3 +189,4 @@ ssh-add ~/.ssh/id_rsa_flyfire >/dev/null 2>&1
 ssh-add ~/.ssh/id_rsa_wumii >/dev/null 2>&1
 
 . /usr/local/etc/profile.d/z.sh
+
