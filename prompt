@@ -219,7 +219,7 @@ freev(){
 
 
 
-alias clearlog="adb logcat -c && adb logcat -c && adb logcat -c && adb logcat -c"
+alias adbc="adb logcat -c && adb logcat -c && adb logcat -c && adb logcat -c"
 alias mainlog="adb logcat -v threadtime | tee `date +%F-%H-%M-%S`.main"
 alias eventlog="adb logcat -v threadtime -b events | tee `date +%F-%H-%M-%S`.events"
 alias startpostgres="postgres -D /usr/local/var/postgres"
