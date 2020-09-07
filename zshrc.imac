@@ -191,3 +191,6 @@ ssh-add ~/.ssh/id_rsa_wumii >/dev/null 2>&1
 . /usr/local/etc/profile.d/z.sh
 
 PATH=$PATH:/Users/ruhouhou/software/bin
+
+#pyenv
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
