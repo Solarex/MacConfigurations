@@ -45,7 +45,6 @@
 	editor = vim
 	quotepath = false
 	pager = diff-so-fancy | less --tabs=4 -RFX
-    gitproxy = /Users/ruhouhou/software/MacConfigurations/gitproxy.sh
 	whitespace = cr-at-eol
 	autocrlf = input
 [diff]
@@ -83,6 +82,3 @@
 	newHighlight = green bold 22
 [diff-so-fancy]
 	stripLeadingSymbols = false
-[http "https://github.com"]
-	proxy = http://127.0.0.1:8123
-	sslVerify = false
