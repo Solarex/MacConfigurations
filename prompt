@@ -444,3 +444,5 @@ source /Users/houruhou/wumii/phabricator/arcanist/resources/shell/bash-completio
 alias wumii='adb shell dumpsys activity com.wumii.android.athena'
 alias window='adb shell dumpsys window windows'
 alias ad="arc diff --reviewers 'lyf, zhuyihao, wangshouchao, yedongsheng'"
+
+export GOPATH="/Users/houruhou/Workspace/Solarex/GoWorkspace/SolarexJVM"
