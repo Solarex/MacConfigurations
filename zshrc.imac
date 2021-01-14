@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 PATH="/Users/ruhouhou/phabricator/arcanist/bin":$PATH
-PATH="/usr/local/Cellar/jmeter/5.4/bin":$PATH
+PATH="/Users/ruhouhou/software/apache-jmeter-5.1.1/bin":$PATH
 alias ad="arc diff --reviewers 'lyf, zhuyihao, wangshouchao, yuqiubo, huangwenzhong'"
 
 
