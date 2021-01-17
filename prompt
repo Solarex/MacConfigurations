@@ -368,7 +368,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-export ALL_PROXY=socks5://127.0.0.1:1080
+#export ALL_PROXY=socks5://127.0.0.1:1080
 
 
 
@@ -446,3 +446,4 @@ alias window='adb shell dumpsys window windows'
 alias ad="arc diff --reviewers 'lyf, zhuyihao, wangshouchao, yedongsheng'"
 
 export GOPATH="/Users/houruhou/Workspace/Solarex/GoWorkspace/SolarexJVM"
+PATH=$PATH:/usr/local/lib/ruby/gems/2.7.0/bin
