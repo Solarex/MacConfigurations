@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 PATH="/Users/ruhouhou/phabricator/arcanist/bin":$PATH
+PATH="/Users/ruhouhou/software/apache-jmeter-5.1.1/bin":$PATH
 alias ad="arc diff --reviewers 'lyf, zhuyihao, wangshouchao, yuqiubo, huangwenzhong'"
 
 
@@ -117,7 +118,7 @@ function mkcd(){
 function greps(){
     grep -i --color=auto -nrHi --exclude-dir={.git,.svn,lib,.gradle,.idea,captures,build,bin,gen} -E "$@" .
 }
-function md() {
+function omd() {
     open -a typora "$@"
 }
 function cdls() {
@@ -193,5 +194,5 @@ ssh-add ~/.ssh/id_rsa_wumii >/dev/null 2>&1
 PATH=$PATH:/Users/ruhouhou/software/bin
 
 #pyenv
-if which pyenv-init > /dev/null; then eval "$(pyenv init -)"; fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
