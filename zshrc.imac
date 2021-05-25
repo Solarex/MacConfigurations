@@ -194,5 +194,11 @@ ssh-add ~/.ssh/id_rsa_wumii >/dev/null 2>&1
 PATH=$PATH:/Users/ruhouhou/software/bin
 
 #pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+# Load pyenv into the shell by adding
+# the following to ~/.zshrc:
+
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
