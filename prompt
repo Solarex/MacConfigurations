@@ -172,8 +172,8 @@ function debug(){
 }
 
 #genpac
-function getpac(){
-    genpac --proxy="SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" -o /Users/houruhou/Software/confs/shadowsocks_autoproxy.pac --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+function updatepac(){
+    genpac --format=pac --pac-proxy="SOCKS5 127.0.0.1:1086" --gfwlist-local=./gfwlist.txt -o gfwlist.pac
 }
 
 function cdls() {
@@ -271,11 +271,6 @@ alias gsp="git stash pop"
 alias gsc="git stash clear"
 
 
-
-#rvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 #virtualenv
 # virtualenvwrapper
 #export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
@@ -285,21 +280,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #export PIP_VIRTUALENV_BASE=$WORKON_HOME
 #export PIP_RESPECT_VIRTUALENV=true
 #!!!! use pyenv virtualenv instead !!!!
-
-#path
-blog="/Users/houruhou/Workspace/OpenSource/Blog+Wiki/blog"
-simiki="/Users/houruhou/Workspace/OpenSource/Blog+Wiki/simiki"
-wiki="/Users/houruhou/Workspace/OpenSource/Blog+Wiki/wiki"
-posts="/Users/houruhou/Workspace/OpenSource/Blog+Wiki/blog/source/_posts"
-flyme5="/Users/houruhou/Workspace/Meizu/flyme/app_flyme5_base"
-mzupdate="/Users/houruhou/Workspace/Meizu/flyme/app_flyme5_base/meizu/Cloud/MzUpdate"
-read="/Users/houruhou/Documents/pdf_to_sync"
-proj="/Users/houruhou/Workspace/OpenSource/Projects"
-reading="/Users/houruhou/Workspace/OpenSource/AndroidReadings"
-study="/Users/houruhou/Workspace/OpenSource/Study"
-sample="/Users/houruhou/Library/Android/sdk/samples/android-15"
-training="/Users/houruhou/Workspace/OpenSource/Training+Guides"
-decompile="/Users/houruhou/Workspace/OpenSource/decompile"
 
 #z
 . `brew --prefix`/etc/profile.d/z.sh
@@ -322,13 +302,6 @@ export ANDROID_HVPROTO=ddm
 
 #groovy
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
-
-#node
-#. "$(brew --prefix nvm)/nvm.sh"
-export NVM_DIR="/Users/houruhou/Workspace/Solarex/NodeWorkspace"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 
 #locale
 LANG=en_US.UTF-8
@@ -367,9 +340,6 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
-#export ALL_PROXY=socks5://127.0.0.1:1080
-
 
 
 #
@@ -434,9 +404,6 @@ fi
 ## By /Users/houruhou/Workspace/Android/FlutterDev/flutter/bin/cache/flutter_tools.snapshot
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
-#ruby
-PATH="/Users/houruhou/.rvm/gems/ruby-1.9.3-p551/bin:$PATH"
-
 
 #wumii
 PATH="/Users/houruhou/wumii/phabricator/arcanist/bin":$PATH
@@ -446,4 +413,3 @@ alias window='adb shell dumpsys window windows'
 alias ad="arc diff --reviewers 'lyf, zhuyihao, wangshouchao, yedongsheng'"
 
 export GOPATH="/Users/houruhou/Workspace/Solarex/GoWorkspace/SolarexJVM"
-PATH=$PATH:/usr/local/lib/ruby/gems/2.7.0/bin

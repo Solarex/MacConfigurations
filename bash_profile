@@ -10,6 +10,5 @@ for file in ~/Software/confs/{path,prompt,exports,aliases,functions,extra,tokens
 done
 unset file
 
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 source /Users/houruhou/Library/Preferences/org.dystroy.broot/launcher/bash/br

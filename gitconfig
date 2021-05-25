@@ -82,7 +82,9 @@
 [diff-so-fancy]
 	stripLeadingSymbols = false
 [http "https://github.com"]
-	proxy = http://127.0.0.1:8123
+	proxy = http://127.0.0.1:1087
 	sslVerify = false
 [pull]
 	rebase = false
+[init]
+	defaultBranch = master
