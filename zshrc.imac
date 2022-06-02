@@ -150,7 +150,7 @@ alias gp='git pull --rebase'
 alias adbc='adb logcat -c'
 
 
-JAVA_HOME=`/usr/libexec/java_home -v1.8`
+JAVA_HOME=`/usr/libexec/java_home -v11`
 #android
 ANDROID_HOME="/Users/ruhouhou/Library/Android/sdk"
 ADT_HOME="/Users/ruhouhou/Library/Android/sdk"
@@ -191,7 +191,7 @@ ssh-add ~/.ssh/id_rsa_wumii >/dev/null 2>&1
 
 . /usr/local/etc/profile.d/z.sh
 
-PATH=$PATH:/Users/ruhouhou/software/bin
+export PATH=$PATH:/Users/ruhouhou/software/bin
 
 #pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -202,3 +202,18 @@ eval "$(pyenv init --path)"
 # the following to ~/.zshrc:
 
 eval "$(pyenv init -)"
+
+export PYTHONHTTPSVERIFY=0
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+function video_info() {
+    ffprobe -select_streams v -show_entries format=duration,size,bit_rate,filename -show_streams -v quiet -of csv="p=0" -of json -i "$*" | less
+}
+
+function image_size() {
+    sips -g pixelWidth -g pixelHeight "$*"
+}
+
+export PATH="/Users/ruhouhou/.pyenv/versions/3.7.9/lib/python3.7/site-packages/qt6_applications/Qt/bin:$PATH"
